@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import '@/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@/index.css';
 
 export const metadata: Metadata = {
   title: 'SmarterBOT.store - Automation Workflows & Business Solutions Platform',

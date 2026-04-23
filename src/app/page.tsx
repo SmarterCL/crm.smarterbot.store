@@ -1,276 +1,251 @@
-'use client';
 
-import Link from 'next/link';
-import {
-    Workflow,
-    ShoppingCart,
-    TrendingUp,
-    Server,
-    Code,
-    Globe,
-    ArrowRight,
-    CheckCircle,
-    Star,
-    Sparkles,
-    Rocket,
-    Users,
-    Shield,
-    Clock,
-    Cpu,
+import { 
+  Bot, 
+  MessageSquare, 
+  Database, 
+  BrainCircuit, 
+  Check, 
+  X, 
+  ArrowRight, 
+  Zap, 
+  TrendingUp, 
+  Clock 
 } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import Link from 'next/link';
 
-export default function Home() {
-    const { language, t } = useLanguage();
-
-    const features = [
-        {
-            icon: Workflow,
-            title: t('home.features.n8n.title'),
-            description: t('home.features.n8n.description'),
-        },
-        {
-            icon: ShoppingCart,
-            title: t('home.features.ecommerce.title'),
-            description: t('home.features.ecommerce.description'),
-        },
-        {
-            icon: TrendingUp,
-            title: t('home.features.meta.title'),
-            description: t('home.features.meta.description'),
-        },
-        {
-            icon: Server,
-            title: t('home.features.vps.title'),
-            description: t('home.features.vps.description'),
-        },
-        {
-            icon: Code,
-            title: t('home.features.custom.title'),
-            description: t('home.features.custom.description'),
-        },
-        {
-            icon: Globe,
-            title: t('home.features.domains.title'),
-            description: t('home.features.domains.description'),
-        },
-    ];
-
-    const stats = [
-        { value: '4,343+', label: t('home.stats.workflows') },
-        { value: '365+', label: t('home.stats.integrations') },
-        { value: '10,000+', label: t('home.stats.users') },
-        { value: '99.9%', label: t('home.stats.uptime') },
-    ];
-
-    const benefits = [
-        t('home.benefits.items.0'),
-        t('home.benefits.items.1'),
-        t('home.benefits.items.2'),
-        t('home.benefits.items.3'),
-        t('home.benefits.items.4'),
-        t('home.benefits.items.5'),
-    ];
-
-    return (
-        <>
-            {/* Hero Section */}
-            <section className="hero-section position-relative overflow-hidden">
-                <div className="container py-5">
-                    <div className="row align-items-center min-vh-50">
-                        <div className="col-lg-8 mx-auto text-center">
-                            <div className="badge bg-warning/20 text-warning border border-warning/30 mb-4 animate-fade-in">
-                                <Star size={14} className="me-1" />
-                                {t('home.hero.badge')}
-                            </div>
-
-                            <h1 className="display-3 fw-bold mb-4 animate-fade-in">
-                                {t('home.hero.title')}{' '}
-                                <span className="text-warning">Smarter Claw OS</span>
-                            </h1>
-
-                            <p className="lead text-secondary mb-5 animate-fade-in">
-                                {t('home.hero.description')}
-                            </p>
-
-                            <div className="d-flex flex-column flex-md-row justify-content-center gap-3 mb-5 animate-fade-in">
-                                <Link href="/claw-os" className="btn btn-warning text-dark d-flex align-items-center justify-content-center gap-2">
-                                    <Cpu size={18} />
-                                    Explore Claw OS
-                                </Link>
-                                <Link href="/workflows" className="btn btn-outline-light d-flex align-items-center justify-content-center gap-2">
-                                    {t('home.hero.ctaWorkflows')}
-                                    <ArrowRight size={18} />
-                                </Link>
-                                <Link href="/demo" className="btn btn-outline-warning d-flex align-items-center justify-content-center gap-2">
-                                    <Rocket size={18} />
-                                    {t('home.hero.ctaDemo')}
-                                </Link>
-                            </div>
-
-                            {/* Stats */}
-                            <div className="row g-4 animate-fade-in">
-                                {stats.map((stat, index) => (
-                                    <div key={index} className="col-6 col-md-3">
-                                        <div className="card card-custom glass h-100 text-center">
-                                            <div className="card-body">
-                                                <div className="text-gradient fw-bold display-6">{stat.value}</div>
-                                                <div className="text-secondary small mt-1">{stat.label}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+export default function LandingPage() {
+  return (
+    <div className="landing-wrapper premium-dark-theme">
+      {/* 2. HERO */}
+      <section className="hero-section min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5">
+        <div className="hero-background-glow"></div>
+        <div className="container position-relative z-1">
+          <div className="row justify-content-center text-center">
+            <div className="col-lg-10">
+              <div className="badge rounded-pill bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 mb-4 px-4 py-2 fs-6 fw-medium hero-badge-anim">
+                Sistema operativo para escalar negocios
+              </div>
+              <h1 className="display-2 fw-bold text-white mb-4 hero-title tracking-tight">
+                Automatiza tu negocio <br/>
+                <span className="text-gradient-primary">en minutos</span>
+              </h1>
+              <p className="lead text-secondary mb-5 fs-3 mx-auto" style={{ maxWidth: '800px' }}>
+                CRM, bots, workflows y ERP funcionando juntos — sin configuración técnica.
+              </p>
+              
+              <div className="d-flex flex-column flex-sm-row justify-content-center gap-4 mb-5">
+                <div className="d-flex align-items-center text-start gap-2 text-white-50">
+                  <Check className="text-primary" size={20} />
+                  <span>Setup automático</span>
                 </div>
-
-                {/* Background Effects */}
-                <div className="position-absolute top-0 start-0 w-100 h-100 overflow-hidden z-n1">
-                    <div className="position-absolute bg-gradient-primary opacity-20" style={{
-                        width: '600px',
-                        height: '600px',
-                        borderRadius: '50%',
-                        top: '-200px',
-                        left: '-200px',
-                        filter: 'blur(100px)'
-                    }}></div>
-                    <div className="position-absolute bg-gradient-primary opacity-20" style={{
-                        width: '600px',
-                        height: '600px',
-                        borderRadius: '50%',
-                        bottom: '-200px',
-                        right: '-200px',
-                        filter: 'blur(100px)'
-                    }}></div>
+                <div className="d-flex align-items-center text-start gap-2 text-white-50">
+                  <Check className="text-primary" size={20} />
+                  <span>IA + Automatización</span>
                 </div>
-            </section>
-
-            {/* Features Section */}
-            <section className="py-5">
-                <div className="container">
-                    <div className="text-center mb-5">
-                        <div className="badge bg-primary/20 text-primary border border-primary/30 mb-3">
-                            <Sparkles size={14} className="me-1" />
-                            {t('home.features.title')} <span className="text-gradient">{t('home.features.titleAccent')}</span>
-                        </div>
-                        <h2 className="mb-3">{t('home.features.description')}</h2>
-                    </div>
-
-                    <div className="row g-4">
-                        {features.map((feature, index) => (
-                            <div key={index} className="col-md-6 col-lg-4 animate-fade-in">
-                                <div className="card card-custom glass h-100 p-4">
-                                    <div className="d-flex align-items-start gap-3">
-                                        <div className="w-12 h-12 rounded-lg bg-bg-tertiary flex items-center justify-center flex-shrink-0">
-                                            <feature.icon className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h3 className="h5 fw-bold mb-2">{feature.title}</h3>
-                                            <p className="text-secondary mb-0">{feature.description}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-5">
-                        <Link href="/integrations" className="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2 mx-auto" style={{ maxWidth: '250px' }}>
-                            {t('home.integrations.viewAll')}
-                            <ArrowRight size={18} />
-                        </Link>
-                    </div>
+                <div className="d-flex align-items-center text-start gap-2 text-white-50">
+                  <Check className="text-primary" size={20} />
+                  <span>Todo conectado</span>
                 </div>
-            </section>
+              </div>
 
-            {/* Benefits Section */}
-            <section className="py-5">
-                <div className="container">
-                    <div className="row align-items-center g-5">
-                        <div className="col-lg-6">
-                            <div className="badge bg-success/20 text-success border border-success/30 mb-3">
-                                <CheckCircle size={14} className="me-1" />
-                                {t('home.benefits.badge')}
-                            </div>
-                            <h2 className="display-6 fw-bold mb-4">
-                                {t('home.benefits.title')} <span className="text-warning">Smarter Claw OS</span>?
-                            </h2>
-                            <p className="lead text-secondary mb-5">
-                                {t('home.benefits.description')}
-                            </p>
-                            <div className="row g-3">
-                                {benefits.map((benefit, index) => (
-                                    <div key={index} className="col-md-6">
-                                        <div className="d-flex align-items-center gap-2">
-                                            <CheckCircle size={20} className="text-success me-3 flex-shrink-0" />
-                                            <span className="text-secondary">{benefit}</span>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
+              <div className="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <Link href="/register" className="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold d-flex align-items-center justify-content-center gap-2 cta-glow hover-scale">
+                  Crear cuenta <ArrowRight size={20} />
+                </Link>
+                <Link href="#demo" className="btn btn-outline-light btn-lg rounded-pill px-5 py-3 fw-medium hover-scale">
+                  Ver demo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                            <Link href="/pricing" className="btn btn-warning text-dark d-flex align-items-center justify-content-center gap-2" style={{ maxWidth: '250px' }}>
-                                {t('home.benefits.cta')}
-                                <ArrowRight size={18} />
-                            </Link>
-                        </div>
-
-                        <div className="col-lg-6">
-                            <div className="row g-4">
-                                <div className="col-md-6">
-                                    <div className="card card-custom glass p-4 text-center">
-                                        <Users className="w-8 h-8 text-primary mb-3 mx-auto" />
-                                        <div className="text-gradient fw-bold display-6">4.9/5</div>
-                                        <div className="text-secondary small">{t('home.benefits.rating')}</div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card card-custom glass p-4 text-center">
-                                        <Clock className="w-8 h-8 text-success mb-3 mx-auto" />
-                                        <div className="text-gradient fw-bold display-6">{'<'} 1h</div>
-                                        <div className="text-secondary small">{t('home.benefits.responseTime')}</div>
-                                    </div>
-                                </div>
-                                <div className="col-md-12">
-                                    <div className="card card-custom glass p-4 text-center">
-                                        <Shield className="w-8 h-8 text-warning mb-3 mx-auto" />
-                                        <div className="text-gradient fw-bold display-6">99.9%</div>
-                                        <div className="text-secondary small">{t('home.benefits.uptime')}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      {/* 3. PROBLEMA */}
+      <section className="problem-section py-6 position-relative">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-5 fw-bold text-white mb-3">Estás perdiendo tiempo y clientes</h2>
+            <p className="text-secondary fs-5">El caos operativo frena tu crecimiento.</p>
+          </div>
+          <div className="row g-4">
+            {[
+              { title: 'Demasiadas herramientas', desc: 'Silos de información que no se hablan entre sí.', icon: <X className="text-danger mb-3" size={40} /> },
+              { title: 'Procesos manuales lentos', desc: 'Horas perdidas copiando y pegando datos.', icon: <X className="text-danger mb-3" size={40} /> },
+              { title: 'Leads sin respuesta', desc: 'Oportunidades de venta que se enfrían y mueren.', icon: <X className="text-danger mb-3" size={40} /> }
+            ].map((item, i) => (
+              <div key={i} className="col-md-4">
+                <div className="problem-card p-4 rounded-4 h-100 border border-danger border-opacity-25 bg-dark bg-opacity-50 hover-lift">
+                  {item.icon}
+                  <h4 className="text-white fw-bold mb-2">{item.title}</h4>
+                  <p className="text-secondary mb-0">{item.desc}</p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* CTA Section */}
-            <section className="py-5">
-                <div className="container">
-                    <div className="card card-custom glass p-5 text-center">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8">
-                                <h2 className="display-6 fw-bold mb-4">
-                                    {t('home.cta.title')} <span className="text-gradient">{t('home.cta.titleAccent')}</span> {language === 'es' ? 'tu Negocio' : 'Your Business'}?
-                                </h2>
-                                <p className="lead text-secondary mb-5">
-                                    {t('home.cta.description')}
-                                </p>
-                                <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
-                                    <Link href="/demo" className="btn btn-warning text-dark d-flex align-items-center justify-content-center gap-2">
-                                        <Rocket size={18} />
-                                        {t('home.cta.button')}
-                                    </Link>
-                                    <Link href="/contact" className="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2">
-                                        {t('home.cta.sales')}
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      {/* 4. SOLUCIÓN */}
+      <section className="solution-section py-6 bg-darker position-relative overflow-hidden">
+        <div className="solution-glow"></div>
+        <div className="container position-relative z-1">
+          <div className="row justify-content-center text-center mb-5">
+            <div className="col-lg-8">
+              <h2 className="display-4 fw-bold text-white mb-4">SmarterBOT lo hace <span className="text-gradient-primary">todo por ti</span></h2>
+              <p className="lead text-secondary">Un solo sistema que conecta ventas, atención y operaciones en tiempo real.</p>
+            </div>
+          </div>
+          
+          <div className="diagram-container p-5 rounded-5 glass-panel border border-primary border-opacity-25 text-center my-5">
+            <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 text-white fw-bold fs-4">
+              <div className="diagram-node">Chatwoot</div>
+              <ArrowRight className="text-primary d-none d-md-block" size={32} />
+              <div className="diagram-node">n8n</div>
+              <ArrowRight className="text-primary d-none d-md-block" size={32} />
+              <div className="diagram-node">Odoo</div>
+              <ArrowRight className="text-primary d-none d-md-block" size={32} />
+              <div className="diagram-node gradient-node">IA Agents</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PRODUCTO (MÓDULOS) */}
+      <section id="producto" className="modules-section py-6">
+        <div className="container">
+          <div className="text-center mb-6">
+            <h2 className="display-5 fw-bold text-white mb-3">Todo lo que necesitas, listo para usar</h2>
+            <p className="text-secondary fs-5">Módulos integrados de nivel empresarial.</p>
+          </div>
+          <div className="row g-4">
+            {[
+              { icon: <Bot size={32} />, title: 'Automatización', desc: 'Workflows listos y pre-configurados con n8n.', color: 'text-info' },
+              { icon: <MessageSquare size={32} />, title: 'Atención al Cliente', desc: 'Bandeja omnicanal unificada con Chatwoot.', color: 'text-success' },
+              { icon: <Database size={32} />, title: 'Gestión Empresarial', desc: 'CRM + ERP potenciado por Odoo v19.', color: 'text-warning' },
+              { icon: <BrainCircuit size={32} />, title: 'Inteligencia', desc: 'Agentes IA y MCP para decisiones autónomas.', color: 'text-primary' }
+            ].map((mod, i) => (
+              <div key={i} className="col-md-6 col-lg-3">
+                <div className="module-card p-4 rounded-4 h-100 glass-card hover-lift">
+                  <div className={`icon-box mb-4 ${mod.color}`}>{mod.icon}</div>
+                  <h4 className="text-white fw-bold mb-3">{mod.title}</h4>
+                  <p className="text-secondary mb-0">{mod.desc}</p>
                 </div>
-            </section>
-        </>
-    );
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CÓMO FUNCIONA */}
+      <section id="como-funciona" className="how-it-works-section py-6 bg-darker">
+        <div className="container">
+          <div className="text-center mb-6">
+            <h2 className="display-5 fw-bold text-white mb-3">Empieza en 3 pasos</h2>
+            <p className="text-primary fs-5 fw-medium">Infraestructura lista en segundos.</p>
+          </div>
+          <div className="row g-4 position-relative">
+            <div className="col-md-4 text-center">
+              <div className="step-number display-1 fw-bold text-white-50 opacity-25 mb-3">01</div>
+              <h4 className="text-white fw-bold mb-2">Creas tu cuenta</h4>
+              <p className="text-secondary">Registro simple en 1 click.</p>
+            </div>
+            <div className="col-md-4 text-center">
+              <div className="step-number display-1 fw-bold text-white-50 opacity-25 mb-3">02</div>
+              <h4 className="text-white fw-bold mb-2">Setup automático</h4>
+              <p className="text-secondary">El sistema aprovisiona tu tenant, bases de datos y workflows al instante.</p>
+            </div>
+            <div className="col-md-4 text-center">
+              <div className="step-number display-1 fw-bold text-white-50 opacity-25 mb-3">03</div>
+              <h4 className="text-white fw-bold mb-2">Empiezas a operar</h4>
+              <p className="text-secondary">Vende y atiende desde el primer minuto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. RESULTADOS */}
+      <section className="results-section py-6">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h2 className="display-5 fw-bold text-white mb-3">Resultados reales</h2>
+          </div>
+          <div className="row g-4 justify-content-center">
+            <div className="col-md-4">
+              <div className="result-card text-center p-5 rounded-4 glass-card border-primary border-opacity-25">
+                <TrendingUp className="text-primary mb-3 mx-auto" size={48} />
+                <h2 className="display-4 fw-bold text-white mb-2">+40%</h2>
+                <p className="text-secondary fs-5 mb-0">Conversión de ventas</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="result-card text-center p-5 rounded-4 glass-card border-primary border-opacity-25">
+                <Clock className="text-primary mb-3 mx-auto" size={48} />
+                <h2 className="display-4 fw-bold text-white mb-2">-60%</h2>
+                <p className="text-secondary fs-5 mb-0">Tiempo operativo</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="result-card text-center p-5 rounded-4 glass-card border-primary border-opacity-25">
+                <Zap className="text-primary mb-3 mx-auto" size={48} />
+                <h2 className="display-4 fw-bold text-white mb-2">100%</h2>
+                <p className="text-secondary fs-5 mb-0">Automatizable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. PRICING */}
+      <section id="precios" className="pricing-section py-6 bg-darker position-relative">
+        <div className="container">
+          <div className="text-center mb-6">
+            <h2 className="display-5 fw-bold text-white mb-3">Planes simples</h2>
+            <p className="text-secondary fs-5">Escala a tu propio ritmo.</p>
+          </div>
+          <div className="row g-4 justify-content-center">
+            {[
+              { name: 'Startup', ideal: 'Para empezar', price: '9.900', features: ['1 Tenant', 'Workflows básicos', 'Soporte email'] },
+              { name: 'Comercio', ideal: 'Para escalar', price: '19.900', featured: true, features: ['Workflows ilimitados', 'Integración Odoo', 'Soporte prioritario'] },
+              { name: 'Empresa', ideal: 'Operación total', price: '49.900', features: ['Infra dedicada', 'Agentes IA Custom', 'Account Manager'] }
+            ].map((plan, i) => (
+              <div key={i} className="col-md-4">
+                <div className={`pricing-card p-5 rounded-4 h-100 ${plan.featured ? 'bg-primary text-dark scale-up shadow-primary' : 'glass-card border border-secondary border-opacity-25'}`}>
+                  <p className={`fw-bold mb-2 ${plan.featured ? 'text-dark opacity-75' : 'text-primary'}`}>{plan.ideal}</p>
+                  <h3 className={`fw-bold mb-4 ${plan.featured ? 'text-dark' : 'text-white'}`}>{plan.name}</h3>
+                  <div className="mb-4">
+                    <span className="fs-1 fw-bold">${plan.price}</span>
+                    <span className={plan.featured ? 'text-dark opacity-75' : 'text-secondary'}>/mes</span>
+                  </div>
+                  <ul className="list-unstyled mb-5">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="d-flex align-items-center gap-2 mb-3">
+                        <Check size={18} className={plan.featured ? 'text-dark' : 'text-primary'} />
+                        <span className={plan.featured ? 'text-dark fw-medium' : 'text-secondary'}>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href="/register" className={`btn w-100 py-3 fw-bold rounded-pill ${plan.featured ? 'btn-dark text-white' : 'btn-outline-primary'}`}>
+                    Crear cuenta
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FINAL CTA */}
+      <section className="final-cta-section py-7 text-center position-relative overflow-hidden">
+        <div className="cta-glow"></div>
+        <div className="container position-relative z-1 py-5">
+          <h2 className="display-4 fw-bold text-white mb-4">Crea tu sistema y empieza hoy</h2>
+          <p className="lead text-secondary mb-5">La infraestructura automática para tu negocio te está esperando.</p>
+          <Link href="/register" className="btn btn-primary btn-lg rounded-pill px-5 py-4 fw-bold fs-5 shadow-primary hover-scale d-inline-flex align-items-center gap-2">
+            Crea tu sistema en 1 click <ArrowRight />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
 }

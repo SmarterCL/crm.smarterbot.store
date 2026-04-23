@@ -8,7 +8,6 @@ import {
     ArrowRight,
     CheckCircle2,
     Terminal,
-    Box,
     Bot,
     MessageSquare,
     Code,
@@ -16,13 +15,10 @@ import {
     Share2,
     Users,
     ChevronDown,
-    Globe,
     Layers,
-    Lock,
-    Headset,
     CreditCard
 } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 
 // Simplified pricing in CLP (Approx 12.990 CLP for the promo, 32.990 for standard)
@@ -36,10 +32,6 @@ const PRICING = {
 
 export default function ClawOSPage() {
     const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start start", "end end"]
-    });
 
     const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
