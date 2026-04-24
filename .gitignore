@@ -1,3 +1,11 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Lockfiles (pnpm only — prevent conflicts)
+package-lock.json
+yarn.lock
+
 # Logs
 logs
 *.log
@@ -5,30 +13,36 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
+# Build output
 dist
 dist-ssr
-*.local
-
-# Next.js specific
 .next/
 out/
+
+# Next.js generated types
 next-env.d.ts
 
-# Editor directories and files
+# Environment variables
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Environment variables
-.env
-.env*.local
-.vercel
+# OS
+.DS_Store
+Thumbs.db
+
+# MCP Gateway (separate deployment)
+mcp-gateway/node_modules

@@ -1,0 +1,15 @@
+node_modules
+.pnpm-store
+.next
+.git
+logs
+*.log
+mcp-gateway
+tenants
+*.sh
+Dockerfile*
+docker-compose*
+Caddyfile
+nginx.conf
+*.md
+!README.md

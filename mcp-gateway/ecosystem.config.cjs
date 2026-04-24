@@ -10,14 +10,6 @@ module.exports = {
         NODE_ENV: "production",
         PORT: 8090
       }
-    },
-    {
-      name: "mcp-brain",
-      script: "brain.mjs",
-      instances: 1,
-      env: {
-        NODE_ENV: "production"
-      }
     }
   ]
 };
