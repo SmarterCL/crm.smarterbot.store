@@ -92,7 +92,7 @@ export default function LandingPage() {
         <div className="container position-relative z-1">
           <div className="row justify-content-center text-center mb-5">
             <div className="col-lg-8">
-              <h2 className="display-4 fw-bold text-white mb-4">SmarterBOT lo hace <span className="text-gradient-primary">todo por ti</span></h2>
+              <h2 className="display-4 fw-bold text-white mb-4">Claw OS lo hace <span className="text-gradient-primary">todo por ti</span></h2>
               <p className="lead text-secondary">Un solo sistema que conecta ventas, atención y operaciones en tiempo real.</p>
             </div>
           </div>

@@ -51,7 +51,7 @@ export default function StatusBadge() {
         display: 'inline-block'
       }} />
       <span style={{ fontSize: 14, fontWeight: 600, color: '#333' }}>
-        SmarterBOT: {getText(status.status)}
+        Claw OS: {getText(status.status)}
       </span>
     </div>
   );

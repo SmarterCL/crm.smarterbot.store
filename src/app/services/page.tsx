@@ -7,49 +7,49 @@ export default function Services() {
     const services = [
         {
             icon: Server,
-            title: 'VPS Hosting',
-            description: 'Enterprise-grade virtual private servers powered by Hostinger infrastructure',
+            title: 'Hosting VPS',
+            description: 'Servidores privados virtuales de nivel empresarial basados en infraestructura Hostinger',
             features: [
-                'SSD Storage up to 1TB',
-                'Up to 32GB RAM',
-                'Full root access',
-                '99.9% uptime guarantee',
-                'DDoS protection',
-                'Automated backups',
+                'Almacenamiento SSD hasta 1TB',
+                'Hasta 32GB de RAM',
+                'Acceso root completo',
+                'Garantía de 99.9% de disponibilidad',
+                'Protección anti-DDoS',
+                'Backups automatizados',
             ],
-            startingPrice: '$9.99/month',
+            startingPrice: '9.990 CLP/mes',
             gradient: 'from-blue-500 to-cyan-500',
             popular: false,
         },
         {
             icon: Globe,
-            title: 'Domain Registration',
-            description: 'Secure your brand with premium domain names and DNS management',
+            title: 'Registro de Dominios',
+            description: 'Asegura tu marca con dominios premium y gestión DNS completa',
             features: [
-                '500+ TLDs available',
-                'Free WHOIS privacy',
-                'DNS management',
-                'Email forwarding',
-                'Auto-renewal',
-                'Domain locking',
+                'Más de 500 TLDs disponibles',
+                'Privacidad WHOIS gratuita',
+                'Gestión DNS',
+                'Redirección de email',
+                'Renovación automática',
+                'Bloqueo de dominio',
             ],
-            startingPrice: '$0.99/year',
+            startingPrice: '990 CLP/año',
             gradient: 'from-purple-500 to-pink-500',
             popular: true,
         },
         {
             icon: Code,
-            title: 'Custom Automation',
-            description: 'Tailored n8n workflows and integrations for your business needs',
+            title: 'Automatización Personalizada',
+            description: 'Flujos n8n e integraciones a medida para las necesidades de tu negocio',
             features: [
-                'Custom workflow development',
-                'API integrations',
-                'Business process automation',
-                'Training and support',
-                'Documentation included',
-                'Ongoing maintenance',
+                'Desarrollo de flujos personalizados',
+                'Integraciones API',
+                'Automatización de procesos empresariales',
+                'Capacitación y soporte',
+                'Documentación incluida',
+                'Mantenimiento continuo',
             ],
-            startingPrice: 'Custom Quote',
+            startingPrice: 'Cotización Personalizada',
             gradient: 'from-orange-500 to-red-500',
             popular: false,
         },
@@ -64,10 +64,10 @@ export default function Services() {
                         Our Services
                     </div>
                     <h1 className="display-4 fw-bold mb-4">
-                        Solutions for Your Business
+                        Soluciones para tu Negocio
                     </h1>
                     <p className="lead text-secondary mb-4 max-w-2xl mx-auto">
-                        From hosting to custom automation, we provide everything you need to scale
+                        Desde hosting hasta automatización personalizada, te ofrecemos todo lo que necesitas para escalar
                     </p>
                 </div>
 
@@ -76,7 +76,7 @@ export default function Services() {
                         <div key={index} className="col-lg-4">
                             <div className={`card card-custom glass h-100 p-4 ${service.popular ? 'border-primary border-2' : ''}`}>
                                 {service.popular && (
-                                    <div className="badge bg-primary text-white mb-3">Most Popular</div>
+                                    <div className="badge bg-primary text-white mb-3">Más Popular</div>
                                 )}
                                 <div className="text-center mb-4">
                                     <div className={`w-16 h-16 rounded-lg bg-gradient-${service.gradient} d-flex align-items-center justify-content-center mx-auto mb-3`}>
@@ -97,7 +97,7 @@ export default function Services() {
                                     <div className="h3 fw-bold text-gradient">{service.startingPrice}</div>
                                 </div>
                                 <Link href="/contact" className="btn btn-primary w-100">
-                                    Get Started
+                                    Comenzar
                                 </Link>
                             </div>
                         </div>
@@ -106,17 +106,17 @@ export default function Services() {
 
                 <div className="text-center">
                     <div className="card card-custom glass p-6 max-w-2xl mx-auto">
-                        <h2 className="h3 fw-bold mb-3">Need a Custom Solution?</h2>
+                        <h2 className="h3 fw-bold mb-3">¿Necesitas una Solución Personalizada?</h2>
                         <p className="text-secondary mb-4">
-                            Contact our sales team for a custom quote tailored to your needs
+                            Contáctanos para recibir una cotización a medida según tus necesidades
                         </p>
                         <div className="d-flex gap-3 justify-content-center">
                             <Link href="/contact" className="btn btn-primary">
-                                Contact Sales
+                                Contactar Ventas
                                 <ArrowRight className="w-5 h-5 ms-2" />
                             </Link>
                             <Link href="/pricing" className="btn btn-secondary">
-                                View Pricing
+                                Ver Precios
                             </Link>
                         </div>
                     </div>

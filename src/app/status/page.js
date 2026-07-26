@@ -41,8 +41,8 @@ export default function StatusPage() {
   if (loading) {
     return (
       <div style={{ padding: 40, textAlign: 'center', fontFamily: 'system-ui' }}>
-        <h1>System Status</h1>
-        <p>Loading...</p>
+        <h1>Estado del Sistema</h1>
+        <p>Cargando...</p>
       </div>
     );
   }
@@ -50,7 +50,7 @@ export default function StatusPage() {
   return (
     <>
       <Head>
-        <title>System Status - SmarterBOT</title>
+        <title>Estado del Sistema - WACRM</title>
       </Head>
       
       <div style={{ padding: 20, maxWidth: 800, margin: '0 auto', fontFamily: 'system-ui' }}>
@@ -98,7 +98,7 @@ export default function StatusPage() {
             Add this to your website:
           </p>
           <code style={{ display: 'block', padding: 15, background: '#fff', borderRadius: 4, fontSize: 12 }}>
-            {'<iframe src="https://smarterbot.store/status-badge" style="border:none;width:300px;height:60px"></iframe>'}
+            {'<iframe src="https://wacrm.cl/status-badge" style="border:none;width:300px;height:60px"></iframe>'}
           </code>
         </div>
         

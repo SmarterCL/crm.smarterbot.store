@@ -43,7 +43,7 @@ export default function OpenClawDashboard() {
     return (
       <div style={{ padding: 40, textAlign: 'center', fontFamily: 'system-ui' }}>
         <h1>🦞 OpenClaw Dashboard</h1>
-        <p>Loading...</p>
+        <p>Cargando...</p>
       </div>
     );
   }
@@ -51,7 +51,7 @@ export default function OpenClawDashboard() {
   return (
     <>
       <Head>
-        <title>OpenClaw Dashboard - SmarterBOT</title>
+        <title>OpenClaw Dashboard - WACRM</title>
       </Head>
       
       <div style={{ padding: 20, maxWidth: 1200, margin: '0 auto', fontFamily: 'system-ui' }}>
@@ -75,7 +75,7 @@ export default function OpenClawDashboard() {
           </div>
           
           <div style={{ padding: 20, background: status.errors.length > 0 ? '#ffe0e0' : '#e0ffe0', borderRadius: 8 }}>
-            <h3 style={{ margin: '0 0 10px 0' }}>🚨 Errors</h3>
+            <h3 style={{ margin: '0 0 10px 0' }}>🚨 Errores</h3>
             <p style={{ fontSize: 36, margin: 0, fontWeight: 'bold', color: status.errors.length > 0 ? '#c00' : '#0a0' }}>
               {status.errors.length}
             </p>
@@ -104,7 +104,7 @@ export default function OpenClawDashboard() {
         {/* Recent Errors */}
         {status.errors.length > 0 && (
           <div style={{ marginBottom: 30 }}>
-            <h2 style={{ fontSize: 24, marginBottom: 15, color: '#c00' }}>🚨 Recent Errors</h2>
+            <h2 style={{ fontSize: 24, marginBottom: 15, color: '#c00' }}>🚨 Errores Recientes</h2>
             {status.errors.slice(-5).map((error, i) => (
               <div key={i} style={{ padding: 15, background: '#ffe0e0', borderRadius: 8, marginBottom: 10 }}>
                 <strong>{error.agent}</strong> - {error.objective}

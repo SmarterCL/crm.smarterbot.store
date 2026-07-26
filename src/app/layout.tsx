@@ -6,25 +6,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/index.css';
 
 export const metadata: Metadata = {
-  title: 'SmarterBOT.store - Automation Workflows & Business Solutions Platform',
+  title: 'WACRM - Automatización de Flujos & Soluciones Empresariales',
   description:
-    'Deploy powerful n8n workflows, integrate Odoo & scale with VPS hosting, and supercharge your marketing with Meta Ads. 4,343+ production-ready workflows.',
+    'Despliega potentes flujos de n8n, integra Odoo, escala con hosting VPS y potencia tu marketing con Meta Ads. Más de 4,343 flujos listos para producción.',
   keywords: [
     'n8n',
-    'automation',
-    'workflows',
+    'automatización',
+    'flujos',
     'Odoo',
     'Meta Ads',
-    'VPS hosting',
-    'business automation',
+    'hosting VPS',
+    'automatización empresarial',
   ],
-  authors: [{ name: 'SmarterBOT', url: 'https://smarterbot.store' }],
+  authors: [{ name: 'WACRM', url: 'https://wacrm.cl' }],
   openGraph: {
-    title: 'SmarterBOT.store - Automation Workflows Platform',
+    title: 'WACRM - Automatización de Flujos',
     description:
-      'Deploy powerful n8n workflows, integrate Odoo & scale with VPS hosting.',
-    url: 'https://smarterbot.store',
-    siteName: 'SmarterBOT.store',
+      'Despliega potentes flujos de n8n, integra Odoo y escala con hosting VPS.',
+    url: 'https://wacrm.cl',
+    siteName: 'WACRM',
     locale: 'es_ES',
     type: 'website',
   },

@@ -30,11 +30,11 @@ const Footer = () => {
           </div>
           
           <div className="col-md-4 text-center text-md-end">
-            <a href="mailto:contacto@smarterbot.store" className="text-secondary text-decoration-none hover-text-white transition-all d-inline-flex align-items-center gap-2">
-              <Mail size={18} /> contacto@smarterbot.store
+            <a href="mailto:contacto@wacrm.cl" className="text-secondary text-decoration-none hover-text-white transition-all d-inline-flex align-items-center gap-2">
+              <Mail size={18} /> contacto@wacrm.cl
             </a>
             <p className="text-secondary opacity-50 mt-2 mb-0 small">
-              &copy; {new Date().getFullYear()} SmarterBOT. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} WACRM. Todos los derechos reservados.
             </p>
           </div>
         </div>

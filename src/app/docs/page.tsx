@@ -8,7 +8,7 @@ export default function Docs() {
         {
             icon: Book,
             title: 'Comenzando',
-            description: 'Aprende lo básico de SmarterBOT, instalación y configuración inicial.',
+            description: 'Aprende lo básico de Claw OS, instalación y configuración inicial.',
             link: '#'
         },
         {
@@ -39,9 +39,9 @@ export default function Docs() {
                         <Book size={14} className="me-1" />
                         Documentation
                     </div>
-                    <h1 className="display-4 fw-bold mb-4">Documentation</h1>
+                    <h1 className="display-4 fw-bold mb-4">Documentación</h1>
                     <p className="lead text-secondary mb-4 max-w-2xl mx-auto">
-                        Everything you need to know about SmarterBOT platform
+                        Todo lo que necesitas saber sobre la plataforma Claw OS
                     </p>
                 </div>
 

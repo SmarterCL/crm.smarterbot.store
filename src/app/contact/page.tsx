@@ -34,11 +34,11 @@ export default function Contact() {
                 <div className="text-center mb-12">
                     <div className="badge bg-primary/20 text-primary border border-primary/30 mb-4">
                         <Mail size={14} className="me-1" />
-                        Get in Touch
+                        Envíanos un Mensaje
                     </div>
-                    <h1 className="display-4 fw-bold mb-4">Contact Us</h1>
+                    <h1 className="display-4 fw-bold mb-4">Contáctanos</h1>
                     <p className="lead text-secondary mb-4 max-w-2xl mx-auto">
-                        Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                        ¿Tienes preguntas? Nos encantaría saber de ti. Envíanos un mensaje y te responderemos lo antes posible.
                     </p>
                 </div>
 
@@ -113,7 +113,7 @@ export default function Contact() {
                                     <Mail className="w-5 h-5 text-primary mt-1" />
                                     <div>
                                         <div className="fw-semibold">Email</div>
-                                        <div className="text-secondary">smarterbotcl@gmail.com</div>
+                                        <div className="text-secondary">contacto@wacrm.cl</div>
                                     </div>
                                 </div>
                                 <div className="d-flex align-items-start gap-3">
@@ -145,7 +145,7 @@ export default function Contact() {
                                 <a href="#" className="btn btn-outline-secondary">
                                     <Linkedin size={20} />
                                 </a>
-                                <a href="mailto:smarterbotcl@gmail.com" className="btn btn-outline-secondary">
+                                <a href="mailto:contacto@wacrm.cl" className="btn btn-outline-secondary">
                                     <MessageSquare size={20} />
                                 </a>
                             </div>

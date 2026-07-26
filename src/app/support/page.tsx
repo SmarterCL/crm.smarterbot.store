@@ -29,8 +29,8 @@ export default function Support() {
                             </div>
                             <h3 className="h4 fw-bold mb-3">{t('support.emailTitle')}</h3>
                             <p className="text-secondary mb-4">{t('support.emailDesc')}</p>
-                            <a href="mailto:smarterbotcl@gmail.com" className="btn btn-primary">
-                                Send Email
+                            <a href="mailto:contacto@wacrm.cl" className="btn btn-primary">
+                                Enviar Email
                             </a>
                         </div>
                     </div>

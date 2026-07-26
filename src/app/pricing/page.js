@@ -52,7 +52,7 @@ export default function PricingPage() {
   return (
     <>
       <Head>
-        <title>Pricing - SmarterBOT</title>
+        <title>Precios - WACRM</title>
       </Head>
       
       <div style={{ padding: 40, maxWidth: 1200, margin: '0 auto', fontFamily: 'system-ui' }}>

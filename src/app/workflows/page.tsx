@@ -27,210 +27,210 @@ export default function Workflows() {
     const workflows: Workflow[] = [
         {
             id: '1',
-            name: 'E-commerce Order Processing',
-            description: 'Automatically process orders from your online store and sync with Odoo ERP',
+            name: 'Procesamiento de Pedidos E-commerce',
+            description: 'Procesa pedidos automáticamente desde tu tienda online y sincroniza con Odoo ERP',
             category: 'ecommerce',
             nodes: 12,
             downloads: '2.4k',
             rating: 4.9,
             icon: ShoppingCart,
             image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-            price: '$49',
+            price: '49.900',
         },
         {
             id: '2',
-            name: 'Meta Ads Lead Capture',
-            description: 'Capture leads from Meta Ads and automatically add to your CRM',
+            name: 'Captura de Leads Meta Ads',
+            description: 'Captura leads de Meta Ads y agrégalos automáticamente a tu CRM',
             category: 'marketing',
             nodes: 8,
             downloads: '1.8k',
             rating: 4.8,
             icon: TrendingUp,
             image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
-            price: '$39',
+            price: '39.900',
         },
         {
             id: '3',
-            name: 'Server Monitoring Alerts',
-            description: 'Monitor server health and send alerts via multiple channels',
-            category: 'infrastructure',
+            name: 'Alertas de Monitoreo de Servidores',
+            description: 'Monitorea la salud de servidores y envía alertas por múltiples canales',
+            category: 'infraestructura',
             nodes: 15,
             downloads: '1.2k',
             rating: 4.7,
             icon: Server,
             image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
-            price: '$59',
+            price: '59.900',
         },
         {
             id: '4',
-            name: 'Custom API Integration',
-            description: 'Connect any API with your existing tools and automate data flow',
-            category: 'development',
+            name: 'Integración API Personalizada',
+            description: 'Conecta cualquier API con tus herramientas existentes y automatiza el flujo de datos',
+            category: 'desarrollo',
             nodes: 10,
             downloads: '950',
             rating: 4.6,
             icon: Code,
             image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
-            price: '$79',
+            price: '79.900',
         },
         {
             id: '5',
-            name: 'Domain Registration Automation',
-            description: 'Automate domain registration and DNS configuration',
-            category: 'domains',
+            name: 'Automatización de Registro de Dominios',
+            description: 'Automatiza el registro de dominios y la configuración DNS',
+            category: 'dominios',
             nodes: 7,
             downloads: '800',
             rating: 4.5,
             icon: Globe,
             image: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?w=800&q=80',
-            price: '$29',
+            price: '29.900',
         },
         {
             id: '6',
-            name: 'Customer Support Ticket Router',
-            description: 'Automatically route support tickets to the right team',
-            category: 'support',
+            name: 'Enrutador de Tickets de Soporte',
+            description: 'Enruta tickets de soporte automáticamente al equipo correcto',
+            category: 'soporte',
             nodes: 9,
             downloads: '1.5k',
             rating: 4.8,
             icon: MessageSquare,
             image: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=800&q=80',
-            price: '$45',
+            price: '45.900',
         },
         {
             id: '7',
-            name: 'Cloud Backup Automation',
-            description: 'Automated backups to multiple cloud providers with encryption',
-            category: 'infrastructure',
+            name: 'Automatización de Backups en la Nube',
+            description: 'Backups automatizados a múltiples proveedores de nube con cifrado',
+            category: 'infraestructura',
             nodes: 11,
             downloads: '1.1k',
             rating: 4.7,
             icon: Cloud,
             image: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80',
-            price: '$55',
+            price: '55.900',
         },
         {
             id: '8',
-            name: 'Database Sync Pipeline',
-            description: 'Real-time database synchronization across multiple sources',
-            category: 'database',
+            name: 'Pipeline de Sincronización de Base de Datos',
+            description: 'Sincronización de base de datos en tiempo real desde múltiples fuentes',
+            category: 'base de datos',
             nodes: 14,
             downloads: '890',
             rating: 4.6,
             icon: Database,
             image: 'https://images.unsplash.com/photo-1544383835-b513e6c987c1?w=800&q=80',
-            price: '$69',
+            price: '69.900',
         },
         {
             id: '9',
-            name: 'Security Compliance Monitor',
-            description: 'Automated security monitoring and compliance reporting',
-            category: 'security',
+            name: 'Monitor de Cumplimiento de Seguridad',
+            description: 'Monitoreo de seguridad automatizado y reportes de cumplimiento',
+            category: 'seguridad',
             nodes: 16,
             downloads: '750',
             rating: 4.8,
             icon: Shield,
             image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
-            price: '$89',
+            price: '89.900',
         },
         {
             id: '10',
-            name: 'Analytics Dashboard Builder',
-            description: 'Create real-time analytics dashboards with automated reporting',
-            category: 'analytics',
+            name: 'Construcción de Paneles Analíticos',
+            description: 'Crea paneles analíticos en tiempo real con reportes automatizados',
+            category: 'analítica',
             nodes: 13,
             downloads: '1.3k',
             rating: 4.7,
             icon: BarChart3,
             image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-            price: '$65',
+            price: '65.900',
         },
         {
             id: '11',
-            name: 'Email Marketing Automation',
-            description: 'Build sophisticated email marketing and notification workflows',
+            name: 'Automatización de Email Marketing',
+            description: 'Construye flujos de email marketing y notificaciones sofisticados',
             category: 'marketing',
             nodes: 10,
             downloads: '1.6k',
             rating: 4.6,
             icon: Mail,
             image: 'https://images.unsplash.com/photo-1563986768494-4dee27a60415?w=800&q=80',
-            price: '$42',
+            price: '42.900',
         },
         {
             id: '12',
-            name: 'Calendar Sync Manager',
-            description: 'Automate scheduling and calendar management across platforms',
-            category: 'productivity',
+            name: 'Gestor de Sincronización de Calendario',
+            description: 'Automatiza la programación y gestión de calendarios entre plataformas',
+            category: 'productividad',
             nodes: 8,
             downloads: '920',
             rating: 4.5,
             icon: Calendar,
             image: 'https://images.unsplash.com/photo-1506784983877-45594efa6c8e?w=800&q=80',
-            price: '$35',
+            price: '35.900',
         },
         {
             id: '13',
-            name: 'Document Processing Pipeline',
-            description: 'Automate document generation, parsing, and workflow approval',
-            category: 'productivity',
+            name: 'Pipeline de Procesamiento de Documentos',
+            description: 'Automatiza la generación de documentos, análisis y aprobación de flujos',
+            category: 'productividad',
             nodes: 12,
             downloads: '880',
             rating: 4.4,
             icon: FileText,
             image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
-            price: '$52',
+            price: '52.900',
         },
         {
             id: '14',
-            name: 'Team Collaboration Hub',
-            description: 'Streamline team communication and project management workflows',
-            category: 'productivity',
+            name: 'Hub de Colaboración Equipos',
+            description: 'Optimiza la comunicación de equipos y flujos de gestión de proyectos',
+            category: 'productividad',
             nodes: 11,
             downloads: '1.4k',
             rating: 4.7,
             icon: Users,
             image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
-            price: '$48',
+            price: '48.900',
         },
         {
             id: '15',
-            name: 'Odoo ERP Connector',
-            description: 'Full Odoo integration for inventory, sales, and accounting',
+            name: 'Conector Odoo ERP',
+            description: 'Integración completa de Odoo para inventario, ventas y contabilidad',
             category: 'erp',
             nodes: 18,
             downloads: '2.1k',
             rating: 4.9,
             icon: Layers,
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-            price: '$99',
+            price: '99.900',
         },
         {
             id: '16',
-            name: 'WhatsApp Business Bot',
-            description: 'Automated WhatsApp responses with CRM integration',
-            category: 'support',
+            name: 'Bot WhatsApp Business',
+            description: 'Respuestas automatizadas de WhatsApp con integración CRM',
+            category: 'soporte',
             nodes: 9,
             downloads: '1.9k',
             rating: 4.8,
             icon: Phone,
             image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=800&q=80',
-            price: '$56',
+            price: '56.900',
         },
     ];
 
     const categories = [
-        { id: 'all', name: 'All', icon: Filter, count: workflows.length },
+        { id: 'all', name: 'Todo', icon: Filter, count: workflows.length },
         { id: 'ecommerce', name: 'E-commerce', icon: ShoppingCart, count: 1 },
         { id: 'marketing', name: 'Marketing', icon: TrendingUp, count: 2 },
-        { id: 'infrastructure', name: 'Infrastructure', icon: Server, count: 2 },
-        { id: 'development', name: 'Development', icon: Code, count: 1 },
-        { id: 'domains', name: 'Domains', icon: Globe, count: 1 },
-        { id: 'support', name: 'Support', icon: MessageSquare, count: 2 },
-        { id: 'database', name: 'Database', icon: Database, count: 1 },
-        { id: 'security', name: 'Security', icon: Shield, count: 1 },
-        { id: 'analytics', name: 'Analytics', icon: BarChart3, count: 1 },
-        { id: 'productivity', name: 'Productivity', icon: Users, count: 3 },
+        { id: 'infraestructura', name: 'Infraestructura', icon: Server, count: 2 },
+        { id: 'desarrollo', name: 'Desarrollo', icon: Code, count: 1 },
+        { id: 'dominios', name: 'Dominios', icon: Globe, count: 1 },
+        { id: 'soporte', name: 'Soporte', icon: MessageSquare, count: 2 },
+        { id: 'base de datos', name: 'Base de Datos', icon: Database, count: 1 },
+        { id: 'seguridad', name: 'Seguridad', icon: Shield, count: 1 },
+        { id: 'analítica', name: 'Analítica', icon: BarChart3, count: 1 },
+        { id: 'productividad', name: 'Productividad', icon: Users, count: 3 },
         { id: 'erp', name: 'ERP', icon: Layers, count: 1 },
     ];
 
@@ -251,20 +251,20 @@ export default function Workflows() {
                         {t('home.stats.workflows')}
                     </div>
                     <h1 className="display-4 fw-bold mb-4">
-                        Browse {t('home.stats.workflows')}
+                        Explora {t('home.stats.workflows')}
                     </h1>
                     <p className="lead text-secondary mb-4 max-w-2xl mx-auto">
-                        4,343+ production-ready automation workflows ready to deploy
+                        4,343+ flujos de automatización listos para desplegar
                     </p>
                 </div>
 
                 {/* Stats */}
                 <div className="row g-4 mb-8">
                     {[
-                        { value: '4,343+', label: 'Total Workflows', icon: GitBranch },
-                        { value: '365+', label: 'Categories', icon: Filter },
-                        { value: '10,000+', label: 'Downloads', icon: Download },
-                        { value: '4.8/5', label: 'Avg Rating', icon: Star },
+                        { value: '4,343+', label: 'Flujos Totales', icon: GitBranch },
+                        { value: '365+', label: 'Categorías', icon: Filter },
+                        { value: '10,000+', label: 'Descargas', icon: Download },
+                        { value: '4.8/5', label: 'Calificación Prom.', icon: Star },
                     ].map((stat, index) => (
                         <div key={index} className="col-6 col-md-3">
                             <div className="card card-custom glass p-4 text-center h-100">
@@ -286,7 +286,7 @@ export default function Workflows() {
                             <input
                                 type="text"
                                 className="form-control bg-bg-tertiary border-border text-primary"
-                                placeholder="Search workflows..."
+                                placeholder="Buscar flujos..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -356,11 +356,11 @@ export default function Workflows() {
                                     <div className="d-grid gap-2 mt-3">
                                         <button className="btn btn-primary btn-sm">
                                             <ExternalLink size={14} className="me-2" />
-                                            View Details
+                                            Ver Detalles
                                         </button>
                                         <button className="btn btn-outline-secondary btn-sm">
                                             <Download size={14} className="me-2" />
-                                            Download
+                                            Descargar
                                         </button>
                                     </div>
                                 </div>
@@ -372,16 +372,16 @@ export default function Workflows() {
                 {/* CTA */}
                 <div className="text-center mt-12">
                     <div className="card card-custom glass p-6 max-w-2xl mx-auto">
-                        <h2 className="h3 fw-bold mb-3">Want More Workflows?</h2>
+                        <h2 className="h3 fw-bold mb-3">¿Necesitas más flujos?</h2>
                         <p className="text-secondary mb-4">
-                            Get access to all 4,343+ production-ready workflows with our premium plan
+                            Obtén acceso a todos los 4,343+ flujos de automatización listos para producción con nuestro plan premium
                         </p>
                         <div className="d-flex gap-3 justify-content-center flex-wrap">
                             <Link href="/pricing" className="btn btn-warning text-dark">
-                                View Pricing
+                                Ver Precios
                             </Link>
                             <Link href="/contact" className="btn btn-outline-secondary">
-                                Contact Sales
+                                Contactar Ventas
                             </Link>
                         </div>
                     </div>
