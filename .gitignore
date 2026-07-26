@@ -1,48 +1,44 @@
-# Dependencies
-node_modules
-.pnpm-store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Lockfiles (pnpm only — prevent conflicts)
-package-lock.json
-yarn.lock
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Logs
-logs
-*.log
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
+.pnpm-debug.log*
 
-# Build output
-dist
-dist-ssr
-.next/
-out/
+# env files (can opt-in for committing if needed)
+.env*
+# keep example files so forkers have a template to copy
+!.env.local.example
+!.env.example
 
-# Next.js generated types
-next-env.d.ts
-
-# Environment variables
-.env
-.env*.local
-
-# Vercel
+# vercel
 .vercel
 
-# Editor
-.vscode/*
-!.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# OS
-.DS_Store
-Thumbs.db
-
-# MCP Gateway (separate deployment)
-mcp-gateway/node_modules
+# typescript
+*.tsbuildinfo
+next-env.d.ts
