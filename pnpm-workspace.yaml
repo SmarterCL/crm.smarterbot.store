@@ -1,0 +1,11 @@
+# pnpm 11 workspace & project settings
+# Docs: https://pnpm.io/settings
+
+engineStrict: true
+
+# Paquetes nativos que necesitan ejecutar sus scripts de build
+allowBuilds:
+  "@parcel/watcher": true
+  "@swc/core": true
+  sharp: true
+  unrs-resolver: true
