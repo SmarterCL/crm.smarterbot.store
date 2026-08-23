@@ -477,6 +477,7 @@
   "Pipelines": {
     "page": {
       "selectPipeline": "Select Pipeline",
+      "defaultPipelineName": "Sales Pipeline",
       "noPipelinesYet": "No pipelines yet",
       "managePipelines": "Manage Pipelines",
       "addPipeline": "Add Pipeline",

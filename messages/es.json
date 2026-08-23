@@ -491,6 +491,7 @@
   "Pipelines": {
     "page": {
       "selectPipeline": "Seleccionar embudo",
+      "defaultPipelineName": "Embudo de Venta",
       "noPipelinesYet": "Aún no hay embudos",
       "managePipelines": "Administrar embudos",
       "addPipeline": "Agregar embudo",
