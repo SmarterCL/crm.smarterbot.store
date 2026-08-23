@@ -984,6 +984,16 @@
         "matchExact": "Exact",
         "closeConversationHint": "Sets the conversation status to \"closed\". No configuration needed."
       }
+    },
+    "templates": {
+      "welcomeMessage": "Welcome Message",
+      "welcomeMessageDesc": "Auto-reply to first-time contacts with a greeting.",
+      "outOfOffice": "Out of Office",
+      "outOfOfficeDesc": "Auto-reply during off-hours so nobody is left waiting.",
+      "leadQualifier": "Lead Qualifier",
+      "leadQualifierDesc": "Ask qualification questions to filter inbound leads.",
+      "followUpReminder": "Follow-up Reminder",
+      "followUpReminderDesc": "Send a nudge if a contact has not replied within 24 hours."
     }
   },
   "Flows": {

@@ -1012,6 +1012,16 @@
       "moveUp": "Mover hacia arriba",
       "moveDown": "Mover hacia abajo",
       "delete": "Eliminar"
+    },
+    "templates": {
+      "welcomeMessage": "Mensaje de bienvenida",
+      "welcomeMessageDesc": "Respuesta automática a nuevos contactos con un saludo.",
+      "outOfOffice": "Fuera de oficina",
+      "outOfOfficeDesc": "Respuesta automática fuera de horario para que nadie quede esperando.",
+      "leadQualifier": "Calificador de leads",
+      "leadQualifierDesc": "Haz preguntas de calificación para filtrar leads entrantes.",
+      "followUpReminder": "Recordatorio de seguimiento",
+      "followUpReminderDesc": "Envía un recordatorio si un contacto no responde en 24 horas."
     }
   },
   "Flows": {

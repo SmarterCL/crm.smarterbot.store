@@ -20,10 +20,12 @@ export interface TemplateStepSeed {
 }
 
 export interface AutomationTemplateDefinition {
-  slug: TemplateSlug
-  name: string
-  description: string
-  trigger_type: AutomationTriggerType
+  slug: TemplateSlug;
+  name: string;
+  name_key: string;
+  description: string;
+  desc_key: string;
+  trigger_type: AutomationTriggerType;
   trigger_config: AutomationTriggerConfig
   steps: TemplateStepSeed[]
 }
@@ -32,7 +34,9 @@ export const AUTOMATION_TEMPLATES: Record<TemplateSlug, AutomationTemplateDefini
   welcome_message: {
     slug: 'welcome_message',
     name: 'Welcome Message',
+    name_key: 'welcomeMessage',
     description: 'Auto-reply to first-time contacts with a greeting.',
+    desc_key: 'welcomeMessageDesc',
     // first_inbound_message (added in PR #33) catches both brand-new
     // contacts AND manually-added/imported contacts on their first-ever
     // reply, which is what a user setting up a "welcome" automation
@@ -56,7 +60,9 @@ export const AUTOMATION_TEMPLATES: Record<TemplateSlug, AutomationTemplateDefini
   out_of_office: {
     slug: 'out_of_office',
     name: 'Out of Office',
+    name_key: 'outOfOffice',
     description: 'Auto-reply during off-hours so nobody is left waiting.',
+    desc_key: 'outOfOfficeDesc',
     trigger_type: 'new_message_received',
     trigger_config: {},
     steps: [
@@ -81,7 +87,9 @@ export const AUTOMATION_TEMPLATES: Record<TemplateSlug, AutomationTemplateDefini
   lead_qualifier: {
     slug: 'lead_qualifier',
     name: 'Lead Qualifier',
+    name_key: 'leadQualifier',
     description: 'Ask qualification questions to filter inbound leads.',
+    desc_key: 'leadQualifierDesc',
     trigger_type: 'keyword_match',
     trigger_config: {
       keywords: ['pricing', 'quote', 'buy'],
@@ -108,7 +116,9 @@ export const AUTOMATION_TEMPLATES: Record<TemplateSlug, AutomationTemplateDefini
   follow_up_reminder: {
     slug: 'follow_up_reminder',
     name: 'Follow-up Reminder',
+    name_key: 'followUpReminder',
     description: 'Send a nudge if a contact has not replied within 24 hours.',
+    desc_key: 'followUpReminderDesc',
     trigger_type: 'new_message_received',
     trigger_config: {},
     steps: [
