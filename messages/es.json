@@ -829,8 +829,9 @@
         "duplicateError": "No se pudo duplicar",
         "deleteError": "No se pudo eliminar"
       },
+      "gateReason": "crear automatizaciones",
       "activeAria": "activa",
-      "openMenu": "Abrir menú"
+      "openMenuAria": "Abrir menú"
     },
     "edit": {
       "loading": "Cargando...",
@@ -2049,6 +2050,16 @@
     "call": "llamada",
     "calls": "llamadas",
     "partialWindowNote": "Mostrando una ventana parcial — el uso es lo suficientemente alto como para que aquí solo se resuman los registros más recientes."
+  },
+  "Notifications": {
+    "title": "Notificaciones",
+    "description": "Las conversaciones que otros compañeros te asignan aparecen aquí.",
+    "markAllRead": "Marcar todas como leídas",
+    "markReadFailed": "No se pudo marcar la notificación como leída",
+    "markAllReadFailed": "No se pudo marcar todo como leído",
+    "noNotifications": "Aún no hay notificaciones",
+    "noNotificationsHint": "Verás una alerta aquí cuando alguien te asigne una conversación.",
+    "retry": "Reintentar"
   },
   "Common": {
     "loading": "Cargando..."

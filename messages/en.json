@@ -804,7 +804,10 @@
         "updateError": "Failed to update",
         "duplicateError": "Failed to duplicate",
         "deleteError": "Failed to delete"
-      }
+      },
+      "gateReason": "create automations",
+      "activeAria": "active",
+      "openMenuAria": "Open menu"
     },
     "edit": {
       "loading": "Loading...",
@@ -1747,5 +1750,15 @@
     "call": "call",
     "calls": "calls",
     "partialWindowNote": "Showing a partial window — usage is high enough that only the most recent records are summarized here."
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "description": "Conversations other teammates assign to you show up here.",
+    "markAllRead": "Mark all as read",
+    "markReadFailed": "Failed to mark notification as read",
+    "markAllReadFailed": "Failed to mark all as read",
+    "noNotifications": "No notifications yet",
+    "noNotificationsHint": "You'll see an alert here when someone assigns you a conversation.",
+    "retry": "Retry"
   }
 }
