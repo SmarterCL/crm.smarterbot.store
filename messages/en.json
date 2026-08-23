@@ -1217,6 +1217,22 @@
       "tagPicked": "{mode} tag {tag}…",
       "tagNone": "{mode} tag (none picked)"
     },
+    "ui": {
+      "stepType": {
+        "condition": "Condition",
+        "wait": "Wait",
+        "action": "Action"
+      },
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "previewNoText": "no text yet",
+      "previewNoBody": "no body yet",
+      "previewPickTemplate": "pick a template",
+      "previewNoUrl": "no url",
+      "unitHours": "hours",
+      "unitMinutes": "minutes",
+      "unitDays": "days"
+    },
     "header": {
       "back": "← Back to flows",
       "backAria": "Back to flows",
@@ -1604,7 +1620,33 @@
       "useMode": "Use {mode} mode",
       "active": "Active",
       "accentColor": "Accent color",
-      "useTheme": "Use {name} theme"
+      "useTheme": "Use {name} theme",
+      "colorModeAria": "Color mode",
+      "modeLight": "Light",
+      "modeDark": "Dark",
+      "themeId": "Theme id: {id}",
+      "themes": {
+        "violet": {
+          "name": "Violet",
+          "tagline": "The default — confident, slightly playful."
+        },
+        "emerald": {
+          "name": "Emerald",
+          "tagline": "Growth-coded, nods at messaging without copying WhatsApp green."
+        },
+        "cobalt": {
+          "name": "Cobalt",
+          "tagline": "Clean B2B-SaaS blue — calm and product-y."
+        },
+        "amber": {
+          "name": "Amber",
+          "tagline": "Warm and friendly — feels good for SMB teams."
+        },
+        "rose": {
+          "name": "Rose",
+          "tagline": "Bold and modern — D2C, creator-economy, lifestyle."
+        }
+      }
     },
     "security": {
       "title": "Login & security",

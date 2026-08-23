@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Moon, Palette, SunMoon, Sun } from "lucide-react";
+import { Check, Moon, Palette, Sun, SunMoon } from "lucide-react";
 
 import { useTheme } from "@/hooks/use-theme";
 import { MODES, THEMES, type Mode, type ThemeId } from "@/lib/themes";
@@ -39,7 +39,7 @@ export function AppearancePanel() {
 
         <div
           role="radiogroup"
-          aria-label="Color mode"
+          aria-label={t("colorModeAria")}
           className="grid max-w-md grid-cols-2 gap-3"
         >
           {MODES.map((m) => (
@@ -48,6 +48,7 @@ export function AppearancePanel() {
               mode={m}
               isActive={m === mode}
               onPick={() => setMode(m)}
+              t={t}
             />
           ))}
         </div>
@@ -64,11 +65,12 @@ export function AppearancePanel() {
             <ThemeCard
               key={tObj.id}
               id={tObj.id}
-              name={tObj.name}
-              tagline={tObj.tagline}
+              name_key={tObj.name_key}
+              tagline_key={tObj.tagline_key}
               swatch={tObj.swatch}
               isActive={tObj.id === theme}
               onPick={() => setTheme(tObj.id)}
+              t={t}
             />
           ))}
         </div>
@@ -81,21 +83,23 @@ function ModeCard({
   mode,
   isActive,
   onPick,
+  t,
 }: {
   mode: Mode;
   isActive: boolean;
   onPick: () => void;
+  t: ReturnType<typeof useTranslations>;
 }) {
-  const t = useTranslations("Settings.appearance");
   const isLight = mode === "light";
   const Icon = isLight ? Sun : Moon;
+  const modeLabel = isLight ? t("modeLight") : t("modeDark");
   return (
     <button
       type="button"
       role="radio"
       onClick={onPick}
       aria-checked={isActive}
-      aria-label={t("useMode", { mode })}
+      aria-label={t("useMode", { mode: modeLabel })}
       className={cn(
         "flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition-colors",
         isActive
@@ -110,7 +114,7 @@ function ModeCard({
         <Icon className="h-4 w-4" />
       </span>
       <span className="flex-1 text-sm font-semibold capitalize text-foreground">
-        {mode}
+        {modeLabel}
       </span>
       {isActive && (
         <span className="inline-flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-medium text-primary">
@@ -124,20 +128,23 @@ function ModeCard({
 
 function ThemeCard({
   id,
-  name,
-  tagline,
+  name_key,
+  tagline_key,
   swatch,
   isActive,
   onPick,
+  t,
 }: {
   id: ThemeId;
-  name: string;
-  tagline: string;
+  name_key: string;
+  tagline_key: string;
   swatch: string;
   isActive: boolean;
   onPick: () => void;
+  t: ReturnType<typeof useTranslations>;
 }) {
-  const t = useTranslations("Settings.appearance");
+  const name = t(`themes.${id}.name`, { defaultValue: id });
+  const tagline = t(`themes.${id}.tagline`, { defaultValue: "" });
   return (
     <button
       type="button"
@@ -182,7 +189,7 @@ function ThemeCard({
         <span className="w-3 bg-muted" />
         <span className="w-3 bg-card" />
       </div>
-      <span className="sr-only">Theme id: {id}</span>
+      <span className="sr-only">{t("themeId", { id })}</span>
     </button>
   );
 }

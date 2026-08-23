@@ -2,15 +2,21 @@
  * Single source of truth for the color-theme catalog.
  *
  * The CSS variables themselves live in `src/app/globals.css` under
- * `html[data-theme="..."]` blocks — that file is the one we paste
+ * `html[data-theme=\"...\"]` blocks — that file is the one we paste
  * theme tokens into. This module only carries the metadata the UI
  * (settings picker, no-flash boot script) needs.
  *
  * Adding a new theme is a two-step change:
- *   1. Append the new `html[data-theme="<id>"]` block in globals.css
+ *   1. Append the new `html[data-theme=\"<id>\"]` block in globals.css
  *      with every token from an existing theme (use violet as the
  *      shape reference).
  *   2. Add an entry below. The order here drives the picker grid.
+ *
+ * Theme display names and taglines are loaded from the i18n message
+ * files under `Settings.appearance.themes.<id>.*` — the `name` and
+ * `tagline` fields below are now just opaque keys so the picker can
+ * render the correct locale without any English fallback text living
+ * in the source.
  */
 
 export const THEME_IDS = [
@@ -31,7 +37,7 @@ export const STORAGE_KEY = "wacrm.theme";
  * MODE — the light/dark dimension, orthogonal to the accent theme.
  *
  * The CSS variables live in `src/app/globals.css` under
- * `html[data-mode="..."]` blocks (neutral surfaces only). Applied
+ * `html[data-mode=\"...\"]` blocks (neutral surfaces only). Applied
  * at runtime via `document.documentElement.dataset.mode`. Dark is
  * the historical default and stays the app's identity; light is the
  * opt-in eye-strain-friendly alternative.
@@ -55,8 +61,10 @@ export function isMode(value: unknown): value is Mode {
 
 export interface ThemeMeta {
   id: ThemeId;
-  name: string;
-  tagline: string;
+  /** i18n key under Settings.appearance.themes.<id>.name */
+  name_key: string;
+  /** i18n key under Settings.appearance.themes.<id>.tagline */
+  tagline_key: string;
   /**
    * Static swatch color for the picker chip. Hard-coded so the boot
    * script / picker cards don't need a getComputedStyle round trip
@@ -69,32 +77,32 @@ export interface ThemeMeta {
 export const THEMES: ReadonlyArray<ThemeMeta> = [
   {
     id: "violet",
-    name: "Violet",
-    tagline: "The default — confident, slightly playful.",
+    name_key: "themes.violet.name",
+    tagline_key: "themes.violet.tagline",
     swatch: "oklch(0.526 0.247 293)",
   },
   {
     id: "emerald",
-    name: "Emerald",
-    tagline: "Growth-coded, nods at messaging without copying WhatsApp green.",
+    name_key: "themes.emerald.name",
+    tagline_key: "themes.emerald.tagline",
     swatch: "oklch(0.62 0.16 162)",
   },
   {
     id: "cobalt",
-    name: "Cobalt",
-    tagline: "Clean B2B-SaaS blue — calm and product-y.",
+    name_key: "themes.cobalt.name",
+    tagline_key: "themes.cobalt.tagline",
     swatch: "oklch(0.585 0.2 254)",
   },
   {
     id: "amber",
-    name: "Amber",
-    tagline: "Warm and friendly — feels good for SMB teams.",
+    name_key: "themes.amber.name",
+    tagline_key: "themes.amber.tagline",
     swatch: "oklch(0.745 0.16 65)",
   },
   {
     id: "rose",
-    name: "Rose",
-    tagline: "Bold and modern — D2C, creator-economy, lifestyle.",
+    name_key: "themes.rose.name",
+    tagline_key: "themes.rose.tagline",
     swatch: "oklch(0.645 0.22 16)",
   },
 ];

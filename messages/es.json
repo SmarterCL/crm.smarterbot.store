@@ -1246,6 +1246,22 @@
       "tagPicked": "{mode} etiqueta {tag}…",
       "tagNone": "{mode} etiqueta (ninguna elegida)"
     },
+    "ui": {
+      "stepType": {
+        "condition": "Condición",
+        "wait": "Esperar",
+        "action": "Acción"
+      },
+      "moveUp": "Mover arriba",
+      "moveDown": "Mover abajo",
+      "previewNoText": "sin texto aún",
+      "previewNoBody": "sin cuerpo aún",
+      "previewPickTemplate": "elige una plantilla",
+      "previewNoUrl": "sin url",
+      "unitHours": "horas",
+      "unitMinutes": "minutos",
+      "unitDays": "días"
+    },
     "header": {
       "back": "← Volver a flujos",
       "backAria": "Volver a flujos",
@@ -1665,7 +1681,33 @@
       "useMode": "Usar modo {mode}",
       "active": "Activo",
       "accentColor": "Color de acento",
-      "useTheme": "Usar tema {name}"
+      "useTheme": "Usar tema {name}",
+      "colorModeAria": "Modo de color",
+      "modeLight": "Claro",
+      "modeDark": "Oscuro",
+      "themeId": "Tema: {id}",
+      "themes": {
+        "violet": {
+          "name": "Violeta",
+          "tagline": "El predeterminado — confiable, un poco juguetón."
+        },
+        "emerald": {
+          "name": "Esmeralda",
+          "tagline": "Codificado para el crecimiento, un guiño al mensajería sin copiar el verde de WhatsApp."
+        },
+        "cobalt": {
+          "name": "Cobalto",
+          "tagline": "Azul B2B-SaaS limpio — calmado y orientado al producto."
+        },
+        "amber": {
+          "name": "Ámbar",
+          "tagline": "Cálido y amigable — se siente bien para equiposPYME."
+        },
+        "rose": {
+          "name": "Rosa",
+          "tagline": "Audaz y moderno — D2C, creadores, estilo de vida."
+        }
+      }
     },
     "security": {
       "title": "Inicio de sesión y seguridad",
