@@ -2015,6 +2015,41 @@
       "description": "Audaz y moderno — D2C, economía de creadores, lifestyle."
     }
   },
+  "Agents": {
+    "pageTitle": "Agentes de IA",
+    "pageDesc": "Tu agente de IA con tu propia clave — configúralo y pruébalo en el playground antes de que responda a clientes en la bandeja de entrada.",
+    "setupTab": "Configuración",
+    "playgroundTab": "Playground",
+    "usageTab": "Uso",
+    "playgroundHeader": "Playground",
+    "playgroundSub": "— prueba respuestas como si fueras un cliente",
+    "resetButton": "Reiniciar",
+    "notConfigured": "Aún no hay un agente configurado — termina {setup} primero.",
+    "getReplyFailed": "No se pudo obtener una respuesta.",
+    "reachAgentFailed": "No se pudo contactar al agente.",
+    "emptyStateTitle": "Envía un mensaje para ver cómo respondería tu agente.",
+    "emptyStateDesc": "Usa tu base de conocimiento y se comporta exactamente igual que el bot de respuesta automática — incluido el handoff.",
+    "notSetUpLink": "¿No está configurado aún? Ve a Configuración",
+    "thinking": "Pensando…",
+    "composerPlaceholder": "Escribe un mensaje de cliente…",
+    "handOffNote": "Haría handoff a un humano aquí",
+    "tokenUsage": "Uso de tokens",
+    "usageDesc": "Tokens gastados en tu clave de proveedor por borradores y el bot de respuesta automática. Solo conteos — no se almacena el contenido de los mensajes aquí.",
+    "noUsage": "Aún no hay uso de IA en los últimos {days} días.",
+    "noUsageHint": "Esto se completa a medida que el asistente redacta y responde automáticamente.",
+    "windowDays": "Últimos {days} días",
+    "totalTokens": "Tokens totales",
+    "llmCalls": "Llamadas de LLM",
+    "autoReply": "Respuesta automática",
+    "drafts": "Borradores",
+    "tokensPerDay": "Tokens por día",
+    "byModel": "Por modelo",
+    "loadUsageFailed": "No se pudo cargar el uso",
+    "loading": "Cargando…",
+    "call": "llamada",
+    "calls": "llamadas",
+    "partialWindowNote": "Mostrando una ventana parcial — el uso es lo suficientemente alto como para que aquí solo se resuman los registros más recientes."
+  },
   "Common": {
     "loading": "Cargando..."
   }
