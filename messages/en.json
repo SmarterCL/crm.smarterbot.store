@@ -1206,6 +1206,23 @@
       "modeRemove": "Remove",
       "tagPicked": "{mode} tag {tag}…",
       "tagNone": "{mode} tag (none picked)"
+    },
+    "header": {
+      "back": "← Back to flows",
+      "backAria": "Back to flows",
+      "backTitle": "Back to Flows",
+      "flowNamePlaceholder": "Flow name",
+      "flowNameAria": "Flow name",
+      "descriptionPlaceholder": "Add a short description (internal — this isn't visible to customers).",
+      "descriptionAria": "Flow description",
+      "editedLabel": "Edited",
+      "editedTitle": "Unsaved changes — hit Save to persist",
+      "runs": "Runs",
+      "delete": "Delete",
+      "pause": "Pause",
+      "activate": "Activate",
+      "save": "Save",
+      "activateDisabledTitle": "Fix the issues below before activating"
     }
   },
   "Settings": {

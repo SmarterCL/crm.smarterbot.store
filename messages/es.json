@@ -1235,6 +1235,23 @@
       "modeRemove": "Quitar",
       "tagPicked": "{mode} etiqueta {tag}…",
       "tagNone": "{mode} etiqueta (ninguna elegida)"
+    },
+    "header": {
+      "back": "← Volver a flujos",
+      "backAria": "Volver a flujos",
+      "backTitle": "Volver a flujos",
+      "flowNamePlaceholder": "Nombre del flujo",
+      "flowNameAria": "Nombre del flujo",
+      "descriptionPlaceholder": "Agrega una breve descripción (interno — no es visible para clientes).",
+      "descriptionAria": "Descripción del flujo",
+      "editedLabel": "Editado",
+      "editedTitle": "Cambios sin guardar — haz clic en Guardar para persistir",
+      "runs": "Ejecuciones",
+      "delete": "Eliminar",
+      "pause": "Pausar",
+      "activate": "Activar",
+      "save": "Guardar",
+      "activateDisabledTitle": "Corrige los problemas de abajo antes de activar"
     }
   },
   "Settings": {
