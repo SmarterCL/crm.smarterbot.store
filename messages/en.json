@@ -1223,6 +1223,14 @@
       "activate": "Activate",
       "save": "Save",
       "activateDisabledTitle": "Fix the issues below before activating"
+    },
+    "templates": {
+      "welcomeMenu": "Welcome menu",
+      "welcomeMenuDesc": "Greet customers who type a keyword and route them to the right agent based on whether they're new or existing.",
+      "faqBot": "FAQ bot",
+      "faqBotDesc": "Answer common questions automatically. Customer picks a topic from a list; the bot replies with the answer and ends.",
+      "leadCapture": "Lead capture",
+      "leadCaptureDesc": "Greet first-time inbounds, capture name + email + company, then hand off to sales with the answers in the note."
     }
   },
   "Settings": {

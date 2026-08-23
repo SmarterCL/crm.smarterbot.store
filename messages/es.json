@@ -1252,6 +1252,14 @@
       "activate": "Activar",
       "save": "Guardar",
       "activateDisabledTitle": "Corrige los problemas de abajo antes de activar"
+    },
+    "templates": {
+      "welcomeMenu": "Menú de bienvenida",
+      "welcomeMenuDesc": "Saluda a los clientes que escriben una palabra clave y enrúllalos al agente correcto según sean nuevos o existentes.",
+      "faqBot": "Bot de preguntas frecuentes",
+      "faqBotDesc": "Responde preguntas comunes automáticamente. El cliente elige un tema de una lista; el bot responde y finaliza.",
+      "leadCapture": "Captura de leads",
+      "leadCaptureDesc": "Saluda a los primeros contactos, captura nombre + email + empresa y luego transfiere a ventas con las respuestas en la nota."
     }
   },
   "Settings": {
@@ -1806,14 +1814,13 @@
   },
   "Notifications": {
     "title": "Notificaciones",
-    "subtitle": "Las conversaciones que otros compañeros te asignan aparecen aquí.",
-    "markAllAsRead": "Marcar todas como leídas",
-    "retry": "Reintentar",
-    "emptyTitle": "Aún no hay notificaciones",
-    "emptyBody": "Verás una alerta aquí cuando alguien te asigne una conversación.",
-    "unread": "Sin leer",
-    "markReadError": "No se pudo marcar la notificación como leída",
-    "markAllError": "No se pudieron marcar todas como leídas"
+    "description": "Las conversaciones que otros compañeros te asignan aparecen aquí.",
+    "markAllRead": "Marcar todas como leídas",
+    "markReadFailed": "No se pudo marcar la notificación como leída",
+    "markAllReadFailed": "No se pudo marcar todo como leído",
+    "noNotifications": "Aún no hay notificaciones",
+    "noNotificationsHint": "Verás una alerta aquí cuando alguien te asigne una conversación.",
+    "retry": "Reintentar"
   },
   "Signup": {
     "title": "Crear cuenta",
@@ -1899,11 +1906,39 @@
     "signOutError": "No se pudo cerrar sesión. Intenta actualizar la página."
   },
   "Agents": {
-    "title": "Agentes de IA",
-    "subtitle": "Tu agente de IA con clave propia — configúralo y luego pruébalo en el playground antes de que responda a los clientes en la bandeja de entrada.",
-    "tabPlayground": "Playground",
-    "tabSetup": "Configuración",
-    "tabUsage": "Uso"
+    "pageTitle": "Agentes de IA",
+    "pageDesc": "Tu agente de IA con tu propia clave — configúralo y pruébalo en el playground antes de que responda a clientes en la bandeja de entrada.",
+    "setupTab": "Configuración",
+    "playgroundTab": "Playground",
+    "usageTab": "Uso",
+    "playgroundHeader": "Playground",
+    "playgroundSub": "— prueba respuestas como si fueras un cliente",
+    "resetButton": "Reiniciar",
+    "notConfigured": "Aún no hay un agente configurado — termina {setup} primero.",
+    "getReplyFailed": "No se pudo obtener una respuesta.",
+    "reachAgentFailed": "No se pudo contactar al agente.",
+    "emptyStateTitle": "Envía un mensaje para ver cómo respondería tu agente.",
+    "emptyStateDesc": "Usa tu base de conocimiento y se comporta exactamente igual que el bot de respuesta automática — incluido el handoff.",
+    "notSetUpLink": "¿No está configurado aún? Ve a Configuración",
+    "thinking": "Pensando…",
+    "composerPlaceholder": "Escribe un mensaje de cliente…",
+    "handOffNote": "Haría handoff a un humano aquí",
+    "tokenUsage": "Uso de tokens",
+    "usageDesc": "Tokens gastados en tu clave de proveedor por borradores y el bot de respuesta automática. Solo conteos — no se almacena el contenido de los mensajes aquí.",
+    "noUsage": "Aún no hay uso de IA en los últimos {days} días.",
+    "noUsageHint": "Esto se completa a medida que el asistente redacta y responde automáticamente.",
+    "windowDays": "Últimos {days} días",
+    "totalTokens": "Tokens totales",
+    "llmCalls": "Llamadas de LLM",
+    "autoReply": "Respuesta automática",
+    "drafts": "Borradores",
+    "tokensPerDay": "Tokens por día",
+    "byModel": "Por modelo",
+    "loadUsageFailed": "No se pudo cargar el uso",
+    "loading": "Cargando…",
+    "call": "llamada",
+    "calls": "llamadas",
+    "partialWindowNote": "Mostrando una ventana parcial — el uso es lo suficientemente alto como para que aquí solo se resuman los registros más recientes."
   },
   "AiPlayground": {
     "notConfiguredToast": "Aún no hay ningún agente configurado — completa la Configuración primero.",
@@ -2032,51 +2067,6 @@
       "name": "Rosa",
       "description": "Audaz y moderno — D2C, economía de creadores, lifestyle."
     }
-  },
-  "Agents": {
-    "pageTitle": "Agentes de IA",
-    "pageDesc": "Tu agente de IA con tu propia clave — configúralo y pruébalo en el playground antes de que responda a clientes en la bandeja de entrada.",
-    "setupTab": "Configuración",
-    "playgroundTab": "Playground",
-    "usageTab": "Uso",
-    "playgroundHeader": "Playground",
-    "playgroundSub": "— prueba respuestas como si fueras un cliente",
-    "resetButton": "Reiniciar",
-    "notConfigured": "Aún no hay un agente configurado — termina {setup} primero.",
-    "getReplyFailed": "No se pudo obtener una respuesta.",
-    "reachAgentFailed": "No se pudo contactar al agente.",
-    "emptyStateTitle": "Envía un mensaje para ver cómo respondería tu agente.",
-    "emptyStateDesc": "Usa tu base de conocimiento y se comporta exactamente igual que el bot de respuesta automática — incluido el handoff.",
-    "notSetUpLink": "¿No está configurado aún? Ve a Configuración",
-    "thinking": "Pensando…",
-    "composerPlaceholder": "Escribe un mensaje de cliente…",
-    "handOffNote": "Haría handoff a un humano aquí",
-    "tokenUsage": "Uso de tokens",
-    "usageDesc": "Tokens gastados en tu clave de proveedor por borradores y el bot de respuesta automática. Solo conteos — no se almacena el contenido de los mensajes aquí.",
-    "noUsage": "Aún no hay uso de IA en los últimos {days} días.",
-    "noUsageHint": "Esto se completa a medida que el asistente redacta y responde automáticamente.",
-    "windowDays": "Últimos {days} días",
-    "totalTokens": "Tokens totales",
-    "llmCalls": "Llamadas de LLM",
-    "autoReply": "Respuesta automática",
-    "drafts": "Borradores",
-    "tokensPerDay": "Tokens por día",
-    "byModel": "Por modelo",
-    "loadUsageFailed": "No se pudo cargar el uso",
-    "loading": "Cargando…",
-    "call": "llamada",
-    "calls": "llamadas",
-    "partialWindowNote": "Mostrando una ventana parcial — el uso es lo suficientemente alto como para que aquí solo se resuman los registros más recientes."
-  },
-  "Notifications": {
-    "title": "Notificaciones",
-    "description": "Las conversaciones que otros compañeros te asignan aparecen aquí.",
-    "markAllRead": "Marcar todas como leídas",
-    "markReadFailed": "No se pudo marcar la notificación como leída",
-    "markAllReadFailed": "No se pudo marcar todo como leído",
-    "noNotifications": "Aún no hay notificaciones",
-    "noNotificationsHint": "Verás una alerta aquí cuando alguien te asigne una conversación.",
-    "retry": "Reintentar"
   },
   "Common": {
     "loading": "Cargando..."

@@ -58,7 +58,9 @@ export interface FlowTemplateNode {
 export interface FlowTemplate {
   slug: string;
   name: string;
+  name_key: string;
   description: string;
+  desc_key: string;
   /** Used by the gallery to surface a relevant icon. lucide-react name. */
   icon: "MessageSquare" | "HelpCircle" | "UserPlus";
   trigger_type: "keyword" | "first_inbound_message" | "manual";
@@ -73,8 +75,10 @@ export interface FlowTemplate {
 const WELCOME_MENU: FlowTemplate = {
   slug: "welcome_menu",
   name: "Welcome menu",
+  name_key: "welcomeMenu",
   description:
     "Greet customers who type a keyword and route them to the right agent based on whether they're new or existing.",
+  desc_key: "welcomeMenuDesc",
   icon: "MessageSquare",
   trigger_type: "keyword",
   trigger_config: { keywords: ["support", "help", "hi"], match_type: "contains" },
@@ -128,8 +132,10 @@ const WELCOME_MENU: FlowTemplate = {
 const FAQ_BOT: FlowTemplate = {
   slug: "faq_bot",
   name: "FAQ bot",
+  name_key: "faqBot",
   description:
     "Answer common questions automatically. Customer picks a topic from a list; the bot replies with the answer and ends.",
+  desc_key: "faqBotDesc",
   icon: "HelpCircle",
   trigger_type: "keyword",
   trigger_config: {
@@ -228,8 +234,10 @@ const FAQ_BOT: FlowTemplate = {
 const LEAD_CAPTURE: FlowTemplate = {
   slug: "lead_capture",
   name: "Lead capture",
+  name_key: "leadCapture",
   description:
     "Greet first-time inbounds, capture name + email + company, then hand off to sales with the answers in the note.",
+  desc_key: "leadCaptureDesc",
   icon: "UserPlus",
   trigger_type: "first_inbound_message",
   trigger_config: {},

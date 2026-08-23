@@ -70,7 +70,9 @@ const STATUS_COLORS: Record<FlowRow["status"], string> = {
 interface TemplateSummary {
   slug: string;
   name: string;
+  name_key: string;
   description: string;
+  desc_key: string;
   icon: "MessageSquare" | "HelpCircle" | "UserPlus";
   trigger_type: string;
   node_count: number;
@@ -85,7 +87,8 @@ const TEMPLATE_ICONS = {
 export default function FlowsPage() {
   const router = useRouter();
   const canCreate = useCan("send-messages");
-  const t = useTranslations("Flows.list");
+  const t = useTranslations("Flows.list")
+  const tTemplates = useTranslations("Flows.templates");
   const [flows, setFlows] = useState<FlowRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [createOpen, setCreateOpen] = useState(false);
@@ -274,10 +277,10 @@ export default function FlowsPage() {
                     >
                       <Icon className="h-5 w-5 text-primary" />
                       <span className="text-sm font-semibold text-popover-foreground">
-                        {template.name}
+                        {tTemplates(template.name_key, { defaultValue: template.name })}
                       </span>
                       <span className="text-xs leading-relaxed text-muted-foreground">
-                        {template.description}
+                        {tTemplates(template.desc_key, { defaultValue: template.description })}
                       </span>
                       <span className="mt-auto border-t border-border pt-2 text-[11px] text-muted-foreground">
                         {t("nodeCount", { count: template.node_count })}

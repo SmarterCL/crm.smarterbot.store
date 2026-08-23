@@ -25,7 +25,9 @@ export async function GET() {
   const templates = listFlowTemplates().map((t) => ({
     slug: t.slug,
     name: t.name,
+    name_key: t.name_key,
     description: t.description,
+    desc_key: t.desc_key,
     icon: t.icon,
     trigger_type: t.trigger_type,
     node_count: t.nodes.length,
