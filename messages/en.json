@@ -1688,6 +1688,29 @@
       "reindex": "Reindex",
       "reindexTooltip": "Re-embed all documents (e.g. after adding an embeddings key)",
       "loading": "Loading…"
+    },
+    "quickReplies": {
+      "title": "Quick replies",
+      "description": "Reusable snippets — plain text or a saved interactive message — that agents can insert from the inbox composer.",
+      "newButton": "New quick reply",
+      "editDialog": "Edit quick reply",
+      "createDialog": "New quick reply",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. Business hours",
+      "textTab": "Text",
+      "interactiveTab": "Interactive",
+      "textContentPlaceholder": "The message text to insert",
+      "empty": "No quick replies yet. Create one to reuse it across conversations.",
+      "nameRequired": "Give the quick reply a name.",
+      "createSuccess": "Quick reply created.",
+      "editSuccess": "Quick reply updated.",
+      "saveError": "Couldn't save the quick reply.",
+      "deleteConfirm": "Delete this quick reply?",
+      "deleteSuccess": "Quick reply deleted.",
+      "deleteError": "Couldn't delete the quick reply.",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…"
     }
   }
 }
