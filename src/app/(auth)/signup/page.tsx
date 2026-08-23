@@ -166,7 +166,7 @@ function SignupPageInner() {
           <CardDescription className="text-muted-foreground">
             {inviteToken
               ? "Verifica tu correo, luego acepta la invitación para unirte a tu equipo."
-              : "Empieza con Smarter CRM para WhatsApp"}
+              : "Empieza con SmarterCRM"}
           </CardDescription>
         </CardHeader>
         <CardContent>

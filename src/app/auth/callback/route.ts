@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const next = requestUrl.searchParams.get('next') || '/dashboard'
 
   if (code) {
-    const response = NextResponse.redirect(requestUrl.origin)
+    const response = NextResponse.redirect(`${requestUrl.origin}${next}`)
 
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 
     await supabase.auth.exchangeCodeForSession(code)
 
-    return NextResponse.redirect(`${requestUrl.origin}${next}`)
+    return response
   }
 
   return NextResponse.redirect(`${requestUrl.origin}${next}`)

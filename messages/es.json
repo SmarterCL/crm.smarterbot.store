@@ -15,7 +15,7 @@
     "createAccount": "Crear cuenta"
   },
   "Sidebar": {
-    "title": "Plantilla de CRM para WhatsApp",
+    "title": "SmarterCRM",
     "dashboard": "Panel",
     "inbox": "Bandeja de entrada",
     "notifications": "Notificaciones",
@@ -509,6 +509,13 @@
       "toastFailedCreatePipeline": "No se pudo crear el embudo",
       "toastPipelineCreated": "Embudo creado",
       "toastNotLinkedToAccount": "Tu perfil no está vinculado a una cuenta."
+    },
+    "defaultStages": {
+      "newLead": "Nuevo cliente potencial",
+      "qualified": "Calificado",
+      "proposalSent": "Propuesta enviada",
+      "negotiation": "Negociación",
+      "won": "Ganado"
     },
     "board": {
       "dropDealHere": "Suelta un negocio aquí",
@@ -1075,7 +1082,7 @@
       "entryNodeTitle": "Nodo de entrada:",
       "entryNodePlaceholder": "Elige el primer nodo…",
       "nodesTitle": "Nodos ({count})",
-      "nodesEmpty": "Agrega un nodo <strong>Inicio</strong>, luego un nodo <strong>Enviar botones</strong> y luego un <strong>Transferencia</strong> — esa es la forma de menú de bienvenida del resumen.",
+      "nodesEmpty": "Agrega un nodo **Inicio**, luego un nodo **Enviar botones** y luego un **Transferencia** — esa es la forma de menú de bienvenida del resumen.",
       "addNode": "Agregar nodo",
       "setAsEntry": "Establecer como entrada",
       "removeNode": "Quitar nodo",
@@ -1513,14 +1520,14 @@
       "step2_3": "Sigue el asistente de configuración para vincular tu negocio",
       "step3": "Obtén las credenciales de la API",
       "step3_1": "Ve a WhatsApp > Configuración de la API",
-      "step3_2": "Copia tu <strong class=\"text-foreground\">ID del número de teléfono</strong>",
-      "step3_3": "Copia tu <strong class=\"text-foreground\">ID de la Cuenta de WhatsApp Business</strong>",
-      "step3_4": "Genera un <strong class=\"text-foreground\">Token de acceso permanente</strong> desde Configuración del negocio > Usuarios del sistema",
+      "step3_2": "Copia tu **ID del número de teléfono**",
+      "step3_3": "Copia tu **ID de la Cuenta de WhatsApp Business**",
+      "step3_4": "Genera un **Token de acceso permanente** desde Configuración del negocio > Usuarios del sistema",
       "step4": "Configura los webhooks",
       "step4_1": "Ve a WhatsApp > Configuración",
       "step4_2": "Haz clic en \"Editar\" en la sección de Webhook",
-      "step4_3": "Pega la <strong class=\"text-foreground\">URL de callback del webhook</strong> de arriba",
-      "step4_4": "Ingresa el mismo <strong class=\"text-foreground\">Token de verificación</strong> que definiste aquí",
+      "step4_3": "Pega la **URL de callback del webhook** de arriba",
+      "step4_4": "Ingresa el mismo **Token de verificación** que definiste aquí",
       "step4_5": "Suscríbete al campo de webhook \"messages\"",
       "metaDocs": "Documentación de la API de WhatsApp de Meta",
       "phoneNumberIdRequired": "El ID del número de teléfono es obligatorio",

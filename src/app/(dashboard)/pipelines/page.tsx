@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { createClient } from "@/lib/supabase/client";
@@ -31,26 +31,31 @@ import { useAuth } from "@/hooks/use-auth";
 import { GatedButton } from "@/components/ui/gated-button";
 import { useTranslations } from "next-intl";
 
-// Pipeline creation is admin-class (settings-tier write under
-// the new RLS); deal creation is operational and only requires
-// agent+. The two CTAs gate on different `useCan` capabilities,
-// not on different copy.
-
 // Spec-defined seed — name and color per the product spec.
-const SPEC_DEFAULT_STAGES = [
-  { name: "New Lead", color: "#3b82f6", position: 0 }, // blue
-  { name: "Qualified", color: "#eab308", position: 1 }, // yellow
-  { name: "Proposal Sent", color: "#f97316", position: 2 }, // orange
-  { name: "Negotiation", color: "#8b5cf6", position: 3 }, // purple
-  { name: "Won", color: "#22c55e", position: 4 }, // green
+const SPEC_DEFAULT_STAGES_COLORS = [
+  { color: "#3b82f6", position: 0 }, // blue
+  { color: "#eab308", position: 1 }, // yellow
+  { color: "#f97316", position: 2 }, // orange
+  { color: "#8b5cf6", position: 3 }, // purple
+  { color: "#22c55e", position: 4 }, // green
 ];
 
 export default function PipelinesPage() {
   const t = useTranslations("Pipelines.page");
+  const tStages = useTranslations("Pipelines.defaultStages");
   const supabase = createClient();
   const canEditSettings = useCan("edit-settings");
   const canCreateDeals = useCan("send-messages");
   const { accountId } = useAuth();
+
+  // Spec-defined seed — name and color per the product spec.
+  const SPEC_DEFAULT_STAGES = [
+    { name: tStages("newLead"), color: "#3b82f6", position: 0 }, // blue
+    { name: tStages("qualified"), color: "#eab308", position: 1 }, // yellow
+    { name: tStages("proposalSent"), color: "#f97316", position: 2 }, // orange
+    { name: tStages("negotiation"), color: "#8b5cf6", position: 3 }, // purple
+    { name: tStages("won"), color: "#22c55e", position: 4 }, // green
+  ];
 
   const [pipelines, setPipelines] = useState<Pipeline[]>([]);
   const [selectedPipelineId, setSelectedPipelineId] = useState<string>("");
@@ -94,7 +99,7 @@ export default function PipelinesPage() {
         .order("position");
       return data ?? [];
     },
-    [supabase],
+    [supabase]
   );
 
   const loadDeals = useCallback(
@@ -106,7 +111,7 @@ export default function PipelinesPage() {
         .order("created_at", { ascending: false });
       return (data ?? []) as Deal[];
     },
-    [supabase],
+    [supabase]
   );
 
   const seedDefaultPipeline = useCallback(async (): Promise<Pipeline | null> => {
@@ -157,7 +162,7 @@ export default function PipelinesPage() {
       setPipelines(list);
       if (list.length > 0) {
         setSelectedPipelineId((prev) =>
-          prev && list.some((p) => p.id === prev) ? prev : list[0].id,
+          prev && list.some((p) => p.id === prev) ? prev : list[0].id
         );
       } else {
         setSelectedPipelineId("");
@@ -218,7 +223,7 @@ export default function PipelinesPage() {
     async (dealId: string, newStageId: string) => {
       // Optimistic update — board already animated; just persist.
       setDeals((prev) =>
-        prev.map((d) => (d.id === dealId ? { ...d, stage_id: newStageId } : d)),
+        prev.map((d) => (d.id === dealId ? { ...d, stage_id: newStageId } : d))
       );
       const { error } = await supabase
         .from("deals")
@@ -229,7 +234,7 @@ export default function PipelinesPage() {
         refreshDeals();
       }
     },
-    [supabase, refreshDeals, t],
+    [supabase, refreshDeals, t]
   );
 
   const handleAddDeal = useCallback(
@@ -238,7 +243,7 @@ export default function PipelinesPage() {
       setDefaultStageId(stageId ?? stages[0]?.id ?? "");
       setDealFormOpen(true);
     },
-    [stages],
+    [stages]
   );
 
   const handleEditDeal = useCallback((deal: Deal) => {
