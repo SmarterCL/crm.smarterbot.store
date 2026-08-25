@@ -5,9 +5,12 @@ export async function GET(request: NextRequest) {
   const requestUrl = new URL(request.url)
   const code = requestUrl.searchParams.get('code')
   const next = requestUrl.searchParams.get('next') || '/dashboard'
+  
+  // Use NEXT_PUBLIC_SITE_URL for production redirect (not container internal URL)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || requestUrl.origin
 
   if (code) {
-    const response = NextResponse.redirect(`${requestUrl.origin}${next}`)
+    const response = NextResponse.redirect(`${siteUrl}${next}`)
 
     const supabase = createServerClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
