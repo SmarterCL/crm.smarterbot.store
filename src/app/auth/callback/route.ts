@@ -29,10 +29,18 @@ export async function GET(request: NextRequest) {
       }
     )
 
-    await supabase.auth.exchangeCodeForSession(code)
+    const { error } = await supabase.auth.exchangeCodeForSession(code)
+
+    if (error) {
+      console.error('OAuth exchange error:', error.message)
+      // Redirect to login with error
+      const errorUrl = new URL('/login', siteUrl)
+      errorUrl.searchParams.set('error', 'oauth_failed')
+      return NextResponse.redirect(errorUrl)
+    }
 
     return response
   }
 
-  return NextResponse.redirect(`${requestUrl.origin}${next}`)
+  return NextResponse.redirect(`${siteUrl}${next}`)
 }
