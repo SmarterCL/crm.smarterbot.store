@@ -577,7 +577,8 @@
       "toastMoveOrDeleteDeals": "Move or delete deals in this stage first",
       "toastFailedDeleteStage": "Failed to delete stage",
       "toastFailedDeletePipeline": "Failed to delete pipeline",
-      "toastDeleted": "Pipeline deleted"
+      "toastDeleted": "Pipeline deleted",
+      "pickColor": "Pick color {color}"
     },
     "analytics": {
       "totalDeals": "Total Deals",
@@ -1544,7 +1545,24 @@
       "step4_3": "Paste the **Webhook Callback URL** from above",
       "step4_4": "Enter the same **Verify Token** you set here",
       "step4_5": "Subscribe to \"messages\" webhook field",
-      "metaDocs": "Meta WhatsApp API Documentation"
+      "metaDocs": "Meta WhatsApp API Documentation",
+      "loadFailed": "Failed to load WhatsApp configuration",
+      "saveFailed": "Failed to save configuration",
+      "apiKeyRequired": "Phone Number ID is required",
+      "tokenRequired": "Access Token is required for initial setup",
+      "tokenReenterRequired": "Please re-enter the Access Token to save changes",
+      "testConnectionError": "API connection failed",
+      "testConnectionFailed": "Connection test failed. Check network and try again.",
+      "verifyConnectionFailed": "Could not reach the verification endpoint.",
+      "numberWired": "Number is fully wired — Meta is delivering events.",
+      "numberNotRegistered": "Number is not fully registered. See the checks below for which step failed.",
+      "resetConfirm": "This will delete the current WhatsApp config so you can re-enter it. Continue?",
+      "resetSuccess": "Configuration cleared. You can now re-enter your credentials.",
+      "resetFailed": "Failed to reset configuration",
+      "webhookCopied": "Webhook URL copied to clipboard",
+      "credentialsSavedAndVerified": "Credentials saved and verified. Inbound registration was skipped (no PIN) — see Registration status below.",
+      "registeredAndLive": "Live — {name} can now receive events.",
+      "connectedAndLive": "WhatsApp connected. Events will start flowing within a minute."
     },
     "sections": {
       "overview": "Overview",

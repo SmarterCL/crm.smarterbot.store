@@ -49,9 +49,10 @@ function LoginPageInner() {
     setGoogleLoading(true);
     setError(null);
 
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
     const redirectTo = inviteToken
-      ? `${window.location.origin}/auth/callback?next=/join/${encodeURIComponent(inviteToken)}`
-      : `${window.location.origin}/auth/callback?next=/dashboard`;
+      ? `${baseUrl}/auth/callback?next=/join/${encodeURIComponent(inviteToken)}`
+      : `${baseUrl}/auth/callback?next=/dashboard`;
 
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",

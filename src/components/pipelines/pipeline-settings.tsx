@@ -298,7 +298,7 @@ export function PipelineSettings({
                             ? "var(--foreground)"
                             : "transparent",
                       }}
-                      aria-label={`Pick color ${color}`}
+                      aria-label={t("pickColor", { color })}
                     />
                   ))}
                 </div>
@@ -336,27 +336,31 @@ export function PipelineSettings({
             </div>
 
             <DialogFooter className="border-border bg-popover/50">
-              <Button
-                variant="destructive"
-                onClick={() => setShowDeleteConfirm(true)}
-                className="mr-auto bg-red-600 hover:bg-red-700"
-              >
-                {t("deletePipeline")}
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => onOpenChange(false)}
-                className="border-border bg-transparent text-muted-foreground hover:bg-muted"
-              >
-                {t("cancel")}
-              </Button>
-              <Button
-                onClick={handleSave}
-                disabled={saving || !name.trim()}
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                {saving ? t("saving") : t("saveChanges")}
-              </Button>
+              <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center bg-popover/80 px-6 py-4 shadow-md">
+                <Button
+                  variant="destructive"
+                  onClick={() => setShowDeleteConfirm(true)}
+                  className="bg-red-600 text-white hover:bg-red-700"
+                >
+                  {t("deletePipeline")}
+                </Button>
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    onClick={() => onOpenChange(false)}
+                    className="border-border bg-transparent text-muted-foreground hover:bg-muted"
+                  >
+                    {t("cancel")}
+                  </Button>
+                  <Button
+                    onClick={handleSave}
+                    disabled={saving || !name.trim()}
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    {saving ? t("saving") : t("saveChanges")}
+                  </Button>
+                </div>
+              </div>
             </DialogFooter>
           </>
         )}
