@@ -26,6 +26,7 @@
 // ============================================================
 
 import type { Metadata } from 'next';
+import { AuthShell } from '@/components/brand/auth-shell';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
@@ -37,8 +38,6 @@ export const metadata: Metadata = {
 
 export default function JoinLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      {children}
-    </div>
+    <AuthShell>{children}</AuthShell>
   );
 }

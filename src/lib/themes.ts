@@ -19,17 +19,14 @@
  * in the source.
  */
 
-export const THEME_IDS = [
-  "violet",
-  "emerald",
-  "cobalt",
-  "amber",
-  "rose",
-] as const;
+// Tuhaus CRM: the accent palette is locked to the brand orange.
+// The original template shipped five accents (violet, emerald, cobalt,
+// amber, rose); they were removed so every account looks the same.
+export const THEME_IDS = ["tuhaus"] as const;
 
 export type ThemeId = (typeof THEME_IDS)[number];
 
-export const DEFAULT_THEME: ThemeId = "violet";
+export const DEFAULT_THEME: ThemeId = "tuhaus";
 
 export const STORAGE_KEY = "wacrm.theme";
 
@@ -49,7 +46,7 @@ export const MODES = ["light", "dark"] as const;
 
 export type Mode = (typeof MODES)[number];
 
-export const DEFAULT_MODE: Mode = "dark";
+export const DEFAULT_MODE: Mode = "light";
 
 export const MODE_STORAGE_KEY = "wacrm.mode";
 
@@ -76,34 +73,10 @@ export interface ThemeMeta {
 
 export const THEMES: ReadonlyArray<ThemeMeta> = [
   {
-    id: "violet",
-    name_key: "themes.violet.name",
-    tagline_key: "themes.violet.tagline",
-    swatch: "oklch(0.526 0.247 293)",
-  },
-  {
-    id: "emerald",
-    name_key: "themes.emerald.name",
-    tagline_key: "themes.emerald.tagline",
-    swatch: "oklch(0.62 0.16 162)",
-  },
-  {
-    id: "cobalt",
-    name_key: "themes.cobalt.name",
-    tagline_key: "themes.cobalt.tagline",
-    swatch: "oklch(0.585 0.2 254)",
-  },
-  {
-    id: "amber",
-    name_key: "themes.amber.name",
-    tagline_key: "themes.amber.tagline",
-    swatch: "oklch(0.745 0.16 65)",
-  },
-  {
-    id: "rose",
-    name_key: "themes.rose.name",
-    tagline_key: "themes.rose.tagline",
-    swatch: "oklch(0.645 0.22 16)",
+    id: "tuhaus",
+    name_key: "themes.tuhaus.name",
+    tagline_key: "themes.tuhaus.tagline",
+    swatch: "#eaa654",
   },
 ];
 

@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/use-theme";
+import { BRAND } from "@/config/brand";
 import { ThemedToaster } from "@/components/themed-toaster";
 import {
   DEFAULT_MODE,
@@ -22,10 +23,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Smarter CRM",
-    template: "%s — Smarter CRM",
+    default: BRAND.name,
+    template: `%s · ${BRAND.name}`,
   },
-  description: "Self-hostable CRM template for WhatsApp.",
+  description: BRAND.description,
+  applicationName: BRAND.name,
   robots: {
     index: false,
     follow: false,
@@ -41,7 +43,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#020617",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#16181d" },
+  ],
   colorScheme: "dark light",
 };
 
