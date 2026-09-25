@@ -1,16 +1,16 @@
 import { ImageResponse } from "next/og";
 
-// Replaces the default Next.js favicon with the brand mark — Hostinger
-// violet rounded square + white chat-square glyph — matching the
-// sidebar logo in `src/components/layout/sidebar.tsx`. Next.js renders
-// this at build time and auto-injects <link rel="icon"> into <head>.
-//
-// This route takes precedence over src/app/favicon.ico, which is the
-// Next.js default and can stay on disk harmlessly (or be removed).
+// Favicon: Tuhaus house mark on a white rounded square, so it stays
+// visible on both light and dark browser tabs. The mark is embedded as
+// a base64 SVG (same file as public/brand/tuhaus-isotipo.svg) because
+// this route runs on the edge and can't read from disk.
 
 export const runtime = "edge";
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
+
+const MARK =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjYyIDQyIDEwOCAxMDgiPjxyZWN0IGZpbGw9IiMxZDFlMWIiIHg9IjExNC43OSIgeT0iNjYuMjciIHdpZHRoPSIzNy40MiIgaGVpZ2h0PSI1MS44NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2LjEgMTIxLjQpIHJvdGF0ZSgtNDUpIi8+PHBhdGggZmlsbD0iIzFkMWUxYiIgZD0iTTc4LjYxLDExMi43OGwzMC45LDMwLjlhOC45NCw4Ljk0LDAsMCwwLDExLjQ3LDFMODMuODYsMTA3LjUyWiIvPjxwYXRoIGZpbGw9IiNlYWE2NTQiIGQ9Ik0xMzMuMjMsODMuOTMsMTExLjQsMTA1Ljc3LDkyLjQ2LDg2LjgzbDIxLTIxLC44LS44LDEyLTEyLTQuMTMtNC4xM2E4LjkxLDguOTEsMCwwLDAtMTIuNjIsMEw2OC40Myw5MGE4LjkxLDguOTEsMCwwLDAsMCwxMi42Mmw3Ljg2LDcuODYsNy41OC03LjU5LDIuMzIsMi4zMmgwbDM3LjIxLDM3LjIxLDEyLjMzLTEyLjMyLTE1LTE1LDIxLjgzLTIxLjgzLDE1LDE1LDUuNjYtNS42NmE4LjkzLDguOTMsMCwwLDAsMC0xMi42MkwxMzMuNjksNjAuNDZsLTEyLDEyWiIvPjwvc3ZnPgo=";
 
 export default function Icon() {
   return new ImageResponse(
@@ -22,22 +22,12 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#7c3aed", // primary (Hostinger-aligned purple)
-          borderRadius: 6,
+          background: "#ffffff",
+          borderRadius: 7,
         }}
       >
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffffff"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={MARK} width={28} height={28} alt="" />
       </div>
     ),
     { ...size },

@@ -179,6 +179,12 @@ html[data-mode="light"][data-theme="tuhaus"] {
   --sidebar-ring: #c77a22;
 }
 
+/* ---- Brand logo: show the variant that matches the mode ---- */
+html[data-mode="dark"] .brand-on-light,
+html:not([data-mode="dark"]) .brand-on-dark {
+  display: none;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
