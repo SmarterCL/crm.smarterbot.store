@@ -1634,7 +1634,7 @@
     },
     "appearance": {
       "title": "Appearance",
-      "description": "Set the mode and accent colour used across the app. Saved to this device — try it, it changes live.",
+      "description": "Choose light or dark mode. Saved on this device and applied instantly.",
       "mode": "Mode",
       "useMode": "Use {mode} mode",
       "active": "Active",
@@ -1664,6 +1664,10 @@
         "rose": {
           "name": "Rose",
           "tagline": "Bold and modern — D2C, creator-economy, lifestyle."
+        },
+        "tuhaus": {
+          "name": "Tuhaus",
+          "tagline": "Tuhaus orange, the brand color."
         }
       }
     },

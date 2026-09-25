@@ -54,6 +54,9 @@ export function AppearancePanel() {
         </div>
       </div>
 
+      {/* Tuhaus CRM: the accent is locked to the brand orange, so the
+          picker only renders if more than one theme is ever re-added. */}
+      {THEMES.length > 1 && (
       <div className="mt-8 space-y-4">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-foreground">
           <Palette className="size-4 text-muted-foreground" />
@@ -75,6 +78,7 @@ export function AppearancePanel() {
           ))}
         </div>
       </div>
+      )}
     </section>
   );
 }

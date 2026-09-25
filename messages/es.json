@@ -1688,7 +1688,7 @@
     },
     "appearance": {
       "title": "Apariencia",
-      "description": "Define el modo y el color de acento usados en toda la aplicación. Se guarda en este dispositivo — pruébalo, cambia en vivo.",
+      "description": "Elige entre modo claro y oscuro. Se guarda en este dispositivo y el cambio es inmediato.",
       "mode": "Modo",
       "useMode": "Usar modo {mode}",
       "active": "Activo",
@@ -1718,6 +1718,10 @@
         "rose": {
           "name": "Rosa",
           "tagline": "Audaz y moderno — D2C, creadores, estilo de vida."
+        },
+        "tuhaus": {
+          "name": "Tuhaus",
+          "tagline": "Naranja Tuhaus, el color de la marca."
         }
       }
     },

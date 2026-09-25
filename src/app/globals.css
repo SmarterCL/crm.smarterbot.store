@@ -145,76 +145,38 @@ html[data-mode="light"] {
   --sidebar-border: oklch(0.922 0.004 260);
 }
 
-/* ---- ACCENT: primary color ---- */
+/* ---- ACCENT: primary color (locked to the Tuhaus brand) ----
+ * Only one accent theme exists: "tuhaus". The brand orange #EAA654 is
+ * used as-is in dark mode (with dark text on buttons, 8:1 contrast).
+ * Light mode swaps in a deeper orange so orange text stays legible on
+ * white surfaces. Mirrors BRAND.colors in src/config/brand.ts.
+ */
 
 :root,
-html[data-theme="violet"] {
-  --primary: oklch(0.526 0.247 293);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.6 0.22 293);
-  --primary-soft: oklch(0.526 0.247 293 / 0.12);
-  --primary-soft-2: oklch(0.526 0.247 293 / 0.2);
-  --ring: oklch(0.526 0.247 293);
-  --chart-1: oklch(0.526 0.247 293);
-  --sidebar-primary: oklch(0.526 0.247 293);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.526 0.247 293);
+html[data-theme="tuhaus"] {
+  --primary: #eaa654;
+  --primary-foreground: #1d1e1b;
+  --primary-hover: #f0b770;
+  --primary-soft: rgb(234 166 84 / 0.12);
+  --primary-soft-2: rgb(234 166 84 / 0.22);
+  --ring: #eaa654;
+  --chart-1: #eaa654;
+  --sidebar-primary: #eaa654;
+  --sidebar-primary-foreground: #1d1e1b;
+  --sidebar-ring: #eaa654;
 }
 
-html[data-theme="emerald"] {
-  --primary: oklch(0.62 0.16 162);
-  --primary-foreground: oklch(0.16 0.02 162);
-  --primary-hover: oklch(0.68 0.15 162);
-  --primary-soft: oklch(0.62 0.16 162 / 0.12);
-  --primary-soft-2: oklch(0.62 0.16 162 / 0.22);
-  --ring: oklch(0.62 0.16 162);
-  --chart-1: oklch(0.62 0.16 162);
-  --chart-2: oklch(0.7 0.14 195);
-  --sidebar-primary: oklch(0.62 0.16 162);
-  --sidebar-primary-foreground: oklch(0.16 0.02 162);
-  --sidebar-ring: oklch(0.62 0.16 162);
-}
-
-html[data-theme="cobalt"] {
-  --primary: oklch(0.585 0.2 254);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.66 0.18 254);
-  --primary-soft: oklch(0.585 0.2 254 / 0.12);
-  --primary-soft-2: oklch(0.585 0.2 254 / 0.22);
-  --ring: oklch(0.585 0.2 254);
-  --chart-1: oklch(0.585 0.2 254);
-  --chart-2: oklch(0.7 0.15 220);
-  --sidebar-primary: oklch(0.585 0.2 254);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.585 0.2 254);
-}
-
-html[data-theme="amber"] {
-  --primary: oklch(0.745 0.16 65);
-  --primary-foreground: oklch(0.18 0.03 65);
-  --primary-hover: oklch(0.8 0.15 65);
-  --primary-soft: oklch(0.745 0.16 65 / 0.12);
-  --primary-soft-2: oklch(0.745 0.16 65 / 0.22);
-  --ring: oklch(0.745 0.16 65);
-  --chart-1: oklch(0.745 0.16 65);
-  --chart-2: oklch(0.7 0.15 35);
-  --sidebar-primary: oklch(0.745 0.16 65);
-  --sidebar-primary-foreground: oklch(0.18 0.03 65);
-  --sidebar-ring: oklch(0.745 0.16 65);
-}
-
-html[data-theme="rose"] {
-  --primary: oklch(0.645 0.22 16);
-  --primary-foreground: oklch(0.985 0 0);
-  --primary-hover: oklch(0.71 0.2 16);
-  --primary-soft: oklch(0.645 0.22 16 / 0.12);
-  --primary-soft-2: oklch(0.645 0.22 16 / 0.22);
-  --ring: oklch(0.645 0.22 16);
-  --chart-1: oklch(0.645 0.22 16);
-  --chart-2: oklch(0.7 0.18 340);
-  --sidebar-primary: oklch(0.645 0.22 16);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-ring: oklch(0.645 0.22 16);
+html[data-mode="light"][data-theme="tuhaus"] {
+  --primary: #c77a22;
+  --primary-foreground: #1d1e1b;
+  --primary-hover: #eaa654;
+  --primary-soft: rgb(199 122 34 / 0.1);
+  --primary-soft-2: rgb(199 122 34 / 0.18);
+  --ring: #c77a22;
+  --chart-1: #c77a22;
+  --sidebar-primary: #c77a22;
+  --sidebar-primary-foreground: #1d1e1b;
+  --sidebar-ring: #c77a22;
 }
 
 @layer base {
