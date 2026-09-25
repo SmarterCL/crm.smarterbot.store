@@ -18,6 +18,7 @@
 // ============================================================
 
 import { NextResponse } from "next/server";
+import { BRAND } from "@/config/brand";
 
 import { requireRole, toErrorResponse } from "@/lib/auth/account";
 import {
@@ -131,7 +132,7 @@ function getBaseUrl(request: Request): string {
       "[POST /api/account/invitations] could not derive base URL from request; falling back to marketing domain",
     );
   }
-  return "https://wacrm.tech";
+  return process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl;
 }
 
 const MAX_LABEL_LEN = 80;
