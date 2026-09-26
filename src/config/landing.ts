@@ -7,7 +7,7 @@
  */
 
 /** Sales WhatsApp number, digits only with country code (e.g. "56912345678"). */
-export const SALES_WHATSAPP = "56900000000";
+export const SALES_WHATSAPP = "56976094103";
 
 export const whatsappLink = (text: string) =>
   `https://wa.me/${SALES_WHATSAPP}?text=${encodeURIComponent(text)}`;
