@@ -134,7 +134,7 @@ export const LANDING = {
         "Difusiones con plantillas de Meta",
         "Automatizaciones y flujos",
         "Respuestas con IA (con tu propia clave)",
-        "Equipo con roles y permisos",
+        "Hasta 3 usuarios, con roles y permisos",
       ],
       cta: "Probar 14 días gratis",
     },
@@ -176,7 +176,7 @@ export const LANDING = {
       },
       {
         q: "¿Cuántas personas de mi equipo pueden usarlo?",
-        a: "Puedes invitar a tu equipo y asignar a cada persona un rol: administrador, agente u observador.",
+        a: "El plan incluye hasta 3 usuarios. Cada persona tiene su propio acceso y un rol: administrador, agente u observador.",
       },
     ],
   },
