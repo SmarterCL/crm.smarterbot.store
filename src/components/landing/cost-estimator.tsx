@@ -12,21 +12,26 @@ const ORANGE_TEXT = "#9a5a14";
 /**
  * Reference rates only, not billed by Tuhaus.
  *
- * Meta: WhatsApp Business Platform rate card for Chile, per delivered
- * message, effective July 2026. Meta updates rates up to once a
- * quarter; confirm current values in Meta Business Suite before
- * quoting a client.
+ * Meta: WhatsApp Business Platform rate card for Chile, USD per
+ * delivered message, as of October 2026. From 1 October 2026 service
+ * replies (free-form messages inside the 24 h window, sent by the team
+ * or by the AI) are billed at the utility rate after a monthly free
+ * allowance per business phone number, and utility templates are
+ * billed inside the window too. Meta updates rates up to once a quarter.
  *
- * IA: OpenAI GPT-4o mini token pricing, used only as a low-cost
- * reference. The client connects their own AI provider and account,
- * so the real cost depends on the model and provider they choose.
+ * IA: reference with OpenAI gpt-5.4-mini, the CRM's default OpenAI
+ * model. Token counts reflect what the auto-reply actually sends:
+ * system prompt + up to 5 knowledge-base chunks + the last 20 messages
+ * (~3,000 input tokens) and a short reply (~250 output tokens). The
+ * client uses their own API key, so the real cost depends on the model.
  */
 const META_CHILE_MARKETING_RATE = 0.0889;
 const META_CHILE_UTILITY_AUTH_RATE = 0.02;
-const AI_REF_INPUT_TOKENS = 500;
-const AI_REF_OUTPUT_TOKENS = 200;
-const AI_REF_INPUT_RATE = 0.15 / 1_000_000;
-const AI_REF_OUTPUT_RATE = 0.6 / 1_000_000;
+const META_FREE_SERVICE_MESSAGES = 1000;
+const AI_REF_INPUT_TOKENS = 3000;
+const AI_REF_OUTPUT_TOKENS = 250;
+const AI_REF_INPUT_RATE = 0.75 / 1_000_000;
+const AI_REF_OUTPUT_RATE = 4.5 / 1_000_000;
 const AI_REF_COST_PER_MESSAGE =
   AI_REF_INPUT_TOKENS * AI_REF_INPUT_RATE + AI_REF_OUTPUT_TOKENS * AI_REF_OUTPUT_RATE;
 
@@ -107,11 +112,15 @@ function CostRow({
 export function CostEstimator() {
   const [marketing, setMarketing] = useState(0);
   const [utilityAuth, setUtilityAuth] = useState(300);
+  const [teamReplies, setTeamReplies] = useState(500);
   const [aiMessages, setAiMessages] = useState(500);
 
+  const billableService = Math.max(0, teamReplies + aiMessages - META_FREE_SERVICE_MESSAGES);
   const metaCost = useMemo(
-    () => marketing * META_CHILE_MARKETING_RATE + utilityAuth * META_CHILE_UTILITY_AUTH_RATE,
-    [marketing, utilityAuth],
+    () =>
+      marketing * META_CHILE_MARKETING_RATE +
+      (utilityAuth + billableService) * META_CHILE_UTILITY_AUTH_RATE,
+    [marketing, utilityAuth, billableService],
   );
   const aiCost = useMemo(() => aiMessages * AI_REF_COST_PER_MESSAGE, [aiMessages]);
   const total = CRM_FIXED_COST + metaCost + aiCost;
@@ -149,14 +158,21 @@ export function CostEstimator() {
               <NumberField
                 id="utility-auth-messages"
                 label="Mensajes de utilidad y autenticación"
-                hint="Confirmaciones, recordatorios y códigos fuera de la ventana de 24 horas."
+                hint="Plantillas de confirmaciones, recordatorios y códigos."
                 value={utilityAuth}
                 onChange={setUtilityAuth}
               />
               <NumberField
+                id="team-replies"
+                label="Respuestas de tu equipo"
+                hint="Mensajes que tu equipo responde a clientes que te escribieron."
+                value={teamReplies}
+                onChange={setTeamReplies}
+              />
+              <NumberField
                 id="ai-messages"
                 label="Respuestas de IA"
-                hint="Mensajes que responde tu asistente de IA."
+                hint="Respuestas automáticas de tu asistente de IA."
                 value={aiMessages}
                 onChange={setAiMessages}
               />
@@ -172,12 +188,12 @@ export function CostEstimator() {
               <CostRow label="Tuhaus CRM" detail="Costo fijo del plan" value={CRM_FIXED_COST} />
               <CostRow
                 label="Meta WhatsApp"
-                detail="Tarifas para Chile, cobradas por Meta directo a tu cuenta"
+                detail={`Tarifas para Chile, cobradas por Meta directo a tu cuenta. Incluye ${META_FREE_SERVICE_MESSAGES.toLocaleString("es-CL")} respuestas gratis al mes.`}
                 value={metaCost}
               />
               <CostRow
                 label="IA"
-                detail="Referencia con OpenAI GPT-4o mini, con tu propia clave"
+                detail="Referencia con OpenAI gpt-5.4-mini, con tu propia clave de API"
                 value={aiCost}
               />
             </div>
@@ -194,16 +210,21 @@ export function CostEstimator() {
         <div className="mt-8 flex gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-5">
           <AlertTriangle className="mt-0.5 size-5 shrink-0 text-amber-500" />
           <div className="text-sm leading-relaxed text-amber-900">
-            <p className="font-semibold">Antes de tomar esto como una cotización</p>
+            <p className="font-semibold">Ten en cuenta</p>
             <ul className="mt-1.5 list-disc space-y-1 pl-4">
               <li>
-                Las tarifas de Meta son las publicadas para Chile, vigentes desde julio de 2026.
-                Meta las actualiza hasta cuatro veces al año; confirma el valor actual en tu
-                Meta Business Suite antes de comprometerte con un cliente.
+                Las tarifas de Meta son las publicadas para Chile en octubre de 2026. Meta las
+                actualiza hasta cuatro veces al año, así que el valor final puede variar. Puedes
+                revisar las tarifas vigentes en tu cuenta de Meta Business Suite.
               </li>
               <li>
-                El costo de IA es una referencia con OpenAI GPT-4o mini. Tú conectas tu propio
-                proveedor de IA, así que el costo real depende del modelo y la cuenta que uses.
+                Desde octubre de 2026, Meta cobra las respuestas dentro de la ventana de 24 horas
+                después de las primeras {META_FREE_SERVICE_MESSAGES.toLocaleString("es-CL")} de cada mes por número.
+              </li>
+              <li>
+                La IA funciona con tu propia clave de API de OpenAI o Anthropic (Claude). La
+                suscripción de ChatGPT o Claude no incluye la API: se contrata aparte y se paga
+                según uso. El costo real depende del modelo que elijas.
               </li>
               <li>Este estimador no genera una factura ni un cobro. Es solo una guía.</li>
             </ul>
