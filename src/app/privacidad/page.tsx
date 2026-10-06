@@ -174,13 +174,25 @@ export default function PrivacyPage() {
         </p>
       </Section>
 
-      <Section title="12. Menores de edad">
+      <Section title="12. Solicitudes de autoridades">
+        <p>
+          Solo entregamos datos personales a una autoridad pública cuando existe una obligación
+          legal válida, después de revisar su legalidad, entregando el mínimo necesario y dejando
+          registro de cada solicitud. El detalle está en nuestro{" "}
+          <Link href="/solicitudes-autoridades" className="underline underline-offset-2">
+            protocolo de solicitudes de autoridades
+          </Link>
+          .
+        </p>
+      </Section>
+
+      <Section title="13. Menores de edad">
         <p>
           {BRAND.name} es un servicio para empresas y no está dirigido a menores de 18 años.
         </p>
       </Section>
 
-      <Section title="13. Cambios a esta política">
+      <Section title="14. Cambios a esta política">
         <p>
           Podemos actualizar esta política. Publicaremos la nueva versión en esta página con su
           fecha y, si el cambio es relevante, avisaremos a los administradores de cada cuenta.
