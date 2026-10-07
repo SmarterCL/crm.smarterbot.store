@@ -13,11 +13,12 @@ export const LEGAL = {
   email: "contacto@tuhaus.com",
   phone: "+56 9 7609 4103",
   countries: ["Chile", "Argentina", "Perú", "Bolivia", "Colombia", "Ecuador"],
-  lastUpdated: "29 de septiembre de 2026",
+  lastUpdated: "6 de octubre de 2026",
 } as const;
 
 export const LEGAL_LINKS = [
   { href: "/privacidad", label: "Política de privacidad" },
   { href: "/terminos", label: "Términos de servicio" },
   { href: "/eliminacion-datos", label: "Eliminación de datos" },
+  { href: "/solicitudes-autoridades", label: "Solicitudes de autoridades" },
 ] as const;

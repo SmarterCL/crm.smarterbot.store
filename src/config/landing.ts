@@ -164,7 +164,7 @@ export const LANDING = {
       },
       {
         q: "¿Cuánto cuesta cada mensaje?",
-        a: "Meta cobra según el país y el tipo de mensaje (marketing, utilidad o autenticación). Ese cobro va directo a tu cuenta de Meta; nosotros no le agregamos recargo.",
+        a: "Meta cobra según el país y el tipo de mensaje: marketing, utilidad y autenticación. Desde octubre de 2026 también cobra las respuestas a clientes después de las primeras 1.000 de cada mes por número. Ese cobro va directo a tu cuenta de Meta; nosotros no le agregamos recargo.",
       },
       {
         q: "¿Cuánto tarda en estar funcionando?",
